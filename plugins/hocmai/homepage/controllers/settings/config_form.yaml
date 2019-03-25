@@ -1,0 +1,10 @@
+name: Settings
+form: $/hocmai/homepage/models/settings/fields.yaml
+modelClass: hocmai\Homepage\Models\Settings
+defaultRedirect: hocmai/homepage/settings
+create:
+    redirect: 'hocmai/homepage/settings/update/:id'
+    redirectClose: hocmai/homepage/settings
+update:
+    redirect: hocmai/homepage/settings
+    redirectClose: hocmai/homepage/settings

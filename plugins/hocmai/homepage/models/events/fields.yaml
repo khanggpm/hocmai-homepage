@@ -1,0 +1,24 @@
+fields:
+    title:
+        label: 'Tiêu đề'
+        span: auto
+        type: text
+    address:
+        label: 'Địa chỉ'
+        span: auto
+        type: text
+    start_date:
+        label: 'Ngày bắt đầu'
+        mode: datetime
+        span: auto
+        type: datepicker
+    end_date:
+        label: 'Ngày kết thúc'
+        mode: datetime
+        span: auto
+        type: datepicker
+    content:
+        label: 'Nội dung'
+        size: ''
+        span: auto
+        type: richeditor

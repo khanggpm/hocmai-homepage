@@ -1,0 +1,176 @@
+url = "/tin-tuc/cat/:cat_id"
+title = 'TIN TỨC'
+layout = 'default'
+[bignews]
+[listsnew]
+==
+function onStart()
+{
+$this->addJs('assets/js/news.js');
+}
+==
+
+<div class="sec-new-detail sec-container">
+    <div class="container">
+        <div class="btn-group-select">
+
+            {% if this.param.cat_id == '1' %}
+            <div class="btn-select active left">
+                <div class="menu-child-cube">
+                    <div class="cube-par">
+                        <a href="{{ 'tin-tuc' | page({cat_id : 1}) }}"><span class="cube-icon"></span>TIN HOCMAI</a>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-select right">
+                <div class="menu-child-cube">
+                    <a href="{{ 'tin-tuc' | page({cat_id : 2}) }}"><span class="cube-icon"></span>TIN BÁO CHÍ</a>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if this.param.cat_id == '2' %}
+            <div class="btn-select  left">
+                <div class="menu-child-cube">
+                    <div class="cube-par">
+                        <a href="{{ 'tin-tuc' | page({cat_id : 1}) }}"><span class="cube-icon"></span>TIN HOCMAI</a>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-select active right">
+                <div class="menu-child-cube">
+                    <a href="{{ 'tin-tuc' | page({cat_id : 2}) }}"><span class="cube-icon"></span>TIN BÁO CHÍ</a>
+                </div>
+            </div>
+            {% endif %}
+            
+        </div>
+        <div class="row">
+            <div class="groupnew">
+                <div class="col-md-8">
+                    <div class="news-magazine">
+                        <div class="news-magazine-top">
+                            {% partial 'news/big-news' %}
+                        </div>
+                        <div class="news-magazine-bottom" id="list_new_first">
+                            {% partial 'news/list-news' %}
+                        </div>
+                        <div class="news-magazine-bottom" id="list_new_page">
+                        </div>
+                        <nav aria-label="Page navigation example" class="text-right">
+                            <ul class="pagination pagi_news">
+
+                              <!--   {% if (total_new > 1)%}
+                                <li class="page-item"><a class="page-link" href="#">Previous</a></li> -->
+                                <li class="page-item pre hidden">
+                                    <a class="page-link" href="#" page='pre' aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+
+
+                                {% for key,i in 1..totalPages %}
+                                <li class="page-item page_{{ i }}">
+                                    <a class="page-link active" href="" page="{{ i }}" cat_id_new="{{ list_news[0].category_id }}">{{ i }}</a>
+                                </li>
+                                {% endfor %}
+
+                                <li class="page-item next" last="{{ totalPages }}">
+                                  <a class="page-link" page='next'  href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+                               <!--  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                {% endif %} -->
+
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+                <div class="col-md-4 fix-sticky">
+                    <div class="detail-new-right clear">
+                        <div class="read-more-new">
+                            {% partial 'news/popular' %}
+                        </div>
+                        <div class="even-future">
+                            {% partial 'news/events' %}
+                        </div>
+                        <div class="fanpage-new">
+                            {% partial 'news/fanpage' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% framework %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1916689885307106&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        $("li.page_1").addClass('active');
+        $(document).on('click','body .page-link',function(event) {
+            event.preventDefault();
+            var cat_id = $('li.active > a').attr('cat_id_new');
+            var page = $(this).attr('page');
+            var next = $('li.next').attr('last'); // totalpage check
+            var active = $('ul.pagi_news').find('li.active > a').attr('page');
+
+            if (page == 'pre') {
+                page = parseInt(active) -1;
+            } else if (page == 'next') {
+                page = parseInt(active) + 1;
+            }
+
+            $('li.page-item').removeClass('active');
+            $("li.page_"+page).addClass('active');
+
+            var pre = $('.pre');
+            if (page == 1) {
+                pre.addClass('hidden');
+            } else {
+                pre.removeClass('hidden');
+            }
+
+            if (page == next) {
+                $('li.next').addClass('hidden');
+            } else {
+                $('li.next').removeClass('hidden');
+            }
+            onPagi(page,cat_id);
+            $("html, body").animate({scrollTop: 650}, 200);
+        });
+
+
+        function onPagi (page, cat_id) {
+            $.request('onPagi', {
+                data: {
+                    page : page,
+                    cat_id : cat_id,
+                },
+                update : {'news/list_new_page' :'#list_new_page'},
+                beforeUpdate: function(data) 
+                { 
+                    /* do something */ 
+                    $('#list_new_first').hide();
+
+                },
+                // success : function() {
+                //    $('#list_new_first').hide();
+                // }
+            });
+        }
+    });
+        
+</script>

@@ -1,0 +1,15 @@
+title = "test"
+url = "/test"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[newsPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+postFeatured = 0
+postPage = "news/post"
+==
+{% component 'newsPosts' %}

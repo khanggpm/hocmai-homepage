@@ -1,0 +1,13 @@
+fields:
+    name:
+        label: 'Phòng ban'
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text

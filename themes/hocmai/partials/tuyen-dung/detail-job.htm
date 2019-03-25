@@ -1,0 +1,311 @@
+[detailjob]
+==
+<!-- <div class="container">
+    <div class="info-top">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="item-info-top notpad">
+                    <div class="name">
+                        <p>PHÒNG BAN</p>
+                    </div>
+                </div>
+                <div class="value hot label-select new">
+                    <p><span class="cebu-before"></span>{{ detail_job[0].room_name }} <span class="label-status label-hot">HOT</span>
+                        <span class="label-status label-new">NEW</span></p>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="item-info-top notpad">
+                    <div class="name">
+                        <p>VỊ TRÍ</p>
+                    </div>
+                </div>
+                <div class="value">
+                    <p><span class="cebu-before"></span>{{ detail_job[0].ranks_name }}</p>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="right-info-top">
+                    <div class="item-info-top right">
+                        <div class="name">
+                            <p>HẠN NỘP HỒ SƠ</p>
+                        </div>
+                    </div>
+                    <div class="value">
+                        <p><span class="cebu-before"></span>{{ detail_job[0].deadline | date('d-m-Y')  }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="info-detail-job">
+        <div class="row">
+            <div class="col-md-9 col-md-offset-3">
+                <div class="table-job">
+                    <table>
+                        <tr>
+                            <td class="name strong">Vị trí
+                            </td>
+                            <td class="strong">{{ detail_job[0].ranks_name }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Mô tả công việc
+                            </td>
+                            <td>
+                               {{ detail_job[0].job_desc | raw }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Yêu cầu công việc
+                            </td>
+                            <td>
+                               {{ detail_job[0].job_requirements | raw }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Quyền lợi được hưởng
+                            </td>
+                            <td>
+                               {{ detail_job[0].entitlements | raw }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Cấp bậc
+                            </td>
+                            <td>  {{ detail_job[0].ranks_name }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Toàn thời gian cố định
+                            </td>
+                            <td>
+                                {{ detail_job[0].working_time }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Kinh nghiệm làm việc</td>
+                            <td>  {{ detail_job[0].work_experience }}</td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Số lượng
+                            </td>
+                            <td>
+                               {{ detail_job[0].slots }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Địa điểm làm việc
+                            </td>
+                            <td>
+                               {{ detail_job[0].work_address }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Mức lương
+                            </td>
+                            <td>
+                                {{ detail_job[0].wage }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Hạn nộp hồ sơ
+                            </td>
+                            <td>
+                                {{ detail_job[0].deadline |date('d-m-Y')  }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Hình thức nộp hồ sơ
+                            </td>
+                            <td>
+                               
+                                {{ detail_job[0].deadline_type  }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Người liên hệ
+                            </td>
+                            <td>
+                                 {{ detail_job[0].contact  }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Email
+                            </td>
+                            <td>
+                                {{ detail_job[0].email  }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Điện thoại
+                            </td>
+                            <td>
+                                 {{ detail_job[0].phone  }}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="btn-close change">
+                    <a href="#">ĐÓNG LẠI</a></div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="info-top">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="item-info-top notpad">
+                    <div class="name">
+                        <p>PHÒNG BAN</p>
+                    </div>
+                </div>
+                <div class="value hot label-select new">
+                    <p><span class="cebu-before"></span> <span class="label-status label-hot">HOT</span>
+                        <span class="label-status label-new">NEW</span></p>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="item-info-top notpad">
+                    <div class="name">
+                        <p>VỊ TRÍ</p>
+                    </div>
+                </div>
+                <div class="value">
+                    <p><span class="cebu-before"></span></p>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="right-info-top">
+                    <div class="item-info-top right">
+                        <div class="name">
+                            <p>HẠN NỘP HỒ SƠ</p>
+                        </div>
+                    </div>
+                    <div class="value">
+                        <p><span class="cebu-before"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="info-detail-job">
+        <div class="row">
+            <div class="col-md-9 col-md-offset-3">
+                <div class="table-job">
+                    <table>
+                        <tr>
+                            <td class="name strong">Vị trí
+                            </td>
+                            <td class="strong">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Mô tả công việc
+                            </td>
+                            <td>
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Yêu cầu công việc
+                            </td>
+                            <td>
+                              
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Quyền lợi được hưởng
+                            </td>
+                            <td>
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Cấp bậc
+                            </td>
+                            <td>  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Toàn thời gian cố định
+                            </td>
+                            <td>
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Kinh nghiệm làm việc</td>
+                            <td>  </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Số lượng
+                            </td>
+                            <td>
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Địa điểm làm việc
+                            </td>
+                            <td>
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Mức lương
+                            </td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Hạn nộp hồ sơ
+                            </td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Hình thức nộp hồ sơ
+                            </td>
+                            <td>
+                               
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Người liên hệ
+                            </td>
+                            <td>
+                                 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Email
+                            </td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="name strong">Điện thoại
+                            </td>
+                            <td>
+                                 
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="btn-close change">
+                    <a href="#">ĐÓNG LẠI</a></div>
+            </div>
+        </div>
+    </div>
+</div>

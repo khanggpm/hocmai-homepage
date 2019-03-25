@@ -1,0 +1,14 @@
+<?php
+
+if ($record->logo != '') {
+    echo '
+        <a
+            data-control="popup"
+            data-size="large"
+            data-handler="onShowImage"
+            data-request-data="image:\''.$record->logo.'\'"
+            href="javascript:;">
+            <img src="/storage/app/media'.$record->logo.'" height="42" >
+        </a>
+    ';
+}

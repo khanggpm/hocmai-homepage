@@ -1,0 +1,5 @@
+<?php
+
+if ($record->room_id > 0) {
+    echo \hocmai\Recruitment\Models\Room::whereId($record->room_id)->value('name');
+}

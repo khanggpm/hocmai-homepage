@@ -1,0 +1,10 @@
+name: Events
+form: $/hocmai/homepage/models/events/fields.yaml
+modelClass: hocmai\Homepage\Models\Events
+defaultRedirect: hocmai/homepage/events
+create:
+    redirect: 'hocmai/homepage/events/update/:id'
+    redirectClose: hocmai/homepage/events
+update:
+    redirect: hocmai/homepage/events
+    redirectClose: hocmai/homepage/events

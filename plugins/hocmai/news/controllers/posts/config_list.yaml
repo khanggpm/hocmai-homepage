@@ -1,0 +1,12 @@
+list: $/hocmai/news/models/posts/columns.yaml
+modelClass: hocmai\News\Models\Posts
+title: Posts
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'hocmai/news/posts/update/:id'

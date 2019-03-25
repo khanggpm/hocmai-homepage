@@ -1,0 +1,180 @@
+description = "Layout Homepage Hocmai"
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <title>{{this.page.title}}</title>
+    
+    <link rel="stylesheet" type="text/css" href="{{'assets/js/bootstrap/css/bootstrap.min.css'|theme}}">
+    <link rel="stylesheet" type="text/css" href="{{'assets/js/swiper/swiper.min.css'|theme}}">
+    <link rel="stylesheet" type="text/css" href="{{'assets/js/fullpage/fullpage.css'|theme}}">
+    <link rel="stylesheet" href="{{'assets/css/style.css'|theme}}" media="all">
+    <link rel="stylesheet" href="{{'assets/css/responsive.css'|theme}}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{'assets/css/animate.css'|theme}}" media="all">
+    <script src="{{'assets/js/jquery-1.9.1.min.js'|theme}}"></script>
+    <script src="{{'assets/js/bootstrap/js/bootstrap.min.js'|theme}}"></script>
+    {% styles %}
+</head>
+<body class="page">
+    
+    <header id="header">
+        <div class="wrap-tool" style="background-image: url(/{{'assets/images/background-menu-child.jpg'|theme}});">
+            <div class="container">
+                <button class="navbar-toggle1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="logo">
+                    {% partial 'site/logo' %}
+                </div>
+                <div class="menu-group">
+                    {% partial 'site/menu' %}
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="main-wrap">
+        <div class="group-btn-down">
+            <ul class="list-btn-down" id="menu">
+                <li data-menuanchor="page-1">
+                    <a href="#page-1">
+                        <img class="icon-down1 btn-down" src="{{'assets/images/icon-down1.png'|theme}}">
+                        <img class="icon-down4 btn-down" src="{{'assets/images/icon-down4.png'|theme}}">
+                        <img class="icon-down btn-down" src="{{'assets/images/icon-down.png'|theme}}">
+                        <img class="icon-down3 btn-down" src="{{'assets/images/icon-down3.png'|theme}}">
+                    </a>
+                </li>
+                <li data-menuanchor="page-2">
+                    <a href="#page-2">
+                        <img class="icon-down1 btn-down" src="{{'assets/images/icon-down1.png'|theme}}">
+                        <img class="icon-down4 btn-down" src="{{'assets/images/icon-down4.png'|theme}}">
+                        <img class="icon-down btn-down" src="{{'assets/images/icon-down.png'|theme}}">
+                        <img class="icon-down3 btn-down" src="{{'assets/images/icon-down3.png'|theme}}">
+                    </a>
+                </li>
+                <li data-menuanchor="page-3">
+                    <a href="#page-3">
+                        <img class="icon-down1 btn-down" src="{{'assets/images/icon-down1.png'|theme}}">
+                        <img class="icon-down4 btn-down" src="{{'assets/images/icon-down4.png'|theme}}">
+                        <img class="icon-down btn-down" src="{{'assets/images/icon-down.png'|theme}}">
+                        <img class="icon-down3 btn-down" src="{{'assets/images/icon-down3.png'|theme}}">
+                    </a>
+                </li>
+                <li data-menuanchor="page-footer">
+                    <a href="#page-footer">
+                        <img class="icon-down1 btn-down" src="{{'assets/images/icon-down1.png'|theme}}">
+                        <img class="icon-down4 btn-down" src="{{'assets/images/icon-down4.png'|theme}}">
+                        <img class="icon-down btn-down" src="{{'assets/images/icon-down.png'|theme}}">
+                        <img class="icon-down3 btn-down" src="{{'assets/images/icon-down3.png'|theme}}">
+                    </a>
+                </li>
+                <li>
+                    <a class="move-down-button" id="scroll-down">
+                        <span class="border-befor"></span>
+                        <span>Kéo xuống <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="fullPage">
+            {% page %}
+            
+            <footer id="footer" class="section section-4 footer">
+                {% partial 'site/footer' %}
+            </footer>
+
+        </div>
+
+
+    </main>
+   
+    <script src="{{ 'assets/js/master.js'|theme }}"></script>
+    <script type="text/javascript" src="{{ 'assets/js/wow.min.js'|theme }}"></script>
+    <script type="text/javascript" src="{{ 'assets/js/swiper/swiper.min.js'|theme }}"></script>
+    <script type="text/javascript" src="{{ 'assets/js/fullpage/fullpage.js'|theme }}"></script>
+
+   <!--  <script>
+        $('form#sendMail').submit(function () {
+            $('form').request('onDelete', {
+                confirm: 'Are you sure?',
+            })
+            
+            return false;
+        });
+
+    </script> -->
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            $(document).on('click','body .send_mail',function(event) {
+                var contact_name = $('#contact_name').val();
+                var contact_phone = $('#contact_phone').val();
+                var contact_email = $('#contact_email').val();
+                var contact_text = $('#contact_text').val();
+                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                // validator
+                if (contact_name == '') {
+                    $('.err_contact_name').html('Vui lòng nhập họ tên');
+                    return false;
+                } else {
+                    $('.err_contact_name').html('');
+                }
+
+                if (contact_phone == '') {
+                    $('.err_contact_phone').html('Vui lòng nhập số điện thoại');
+                    return false;
+                } else if (isNaN(contact_phone) || contact_phone.length < 10 || contact_phone.length > 11) {
+                    $('.err_contact_phone').html('Số điện thoại nhập không chính xác ');
+                    return false;
+                } else {
+                    $('.err_contact_phone').html('');
+                }
+
+                if (contact_email == '') {
+                    $('.err_contact_email').html('Vui lòng nhập email');
+                    return false;
+                } else if( !regex.test(contact_email))  {
+                    $('.err_contact_email').html('Email không chính xác');
+                    return false;
+                } else {
+                    $('.err_contact_email').html('');
+                }
+
+                $.request('onSendMail', {
+                    data: {
+                        name : contact_name,
+                        phone : contact_phone,
+                        email : contact_email,
+                        content : contact_text,
+                    },
+                    success: function(data) {
+                        var suc = data.suc;
+                        if (suc == 1) {
+                            $('#contact_div').hide();
+                            $('#success_send_mail').text('Cảm ơn bạn đã liên hệ với chúng tôi !');
+                        }
+                    }
+                });
+
+
+            });
+        });
+    </script>
+    {% scripts %}
+</body>
+</html>
+

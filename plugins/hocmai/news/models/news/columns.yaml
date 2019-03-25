@@ -1,0 +1,14 @@
+columns:
+    title:
+        label: 'Tiêu đề'
+        type: text
+        searchable: true
+    image:
+        label: Ảnh
+        type: text
+    view:
+        label: 'Lượt xem'
+        type: number
+    created_at:
+        label: 'Ngày viết bài'
+        type: time

@@ -1,0 +1,5 @@
+<?php
+
+if ($record->jobs_id > 0) {
+    echo \hocmai\Recruitment\Models\Jobs::whereId($record->jobs_id)->value('name');
+}

@@ -1,0 +1,12 @@
+list: $/hocmai/homepage/models/info/columns.yaml
+modelClass: hocmai\Homepage\Models\Info
+title: Info
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'hocmai/homepage/info/update/:id'

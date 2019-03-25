@@ -1,0 +1,92 @@
+fields:
+    title:
+        label: 'Tiêu đề'
+        span: auto
+        type: text
+    image:
+        label: 'Ảnh hiển thị'
+        mode: image
+        imageWidth: '150'
+        imageHeight: '150'
+        span: auto
+        type: mediafinder
+    status:
+        label: 'Hiển thị'
+        options:
+            1: 'Khối xoay'
+            2: 'Chương trình giáo dục'
+        span: auto
+        type: radio
+    url_khoi_xoay:
+        label: 'Link liên kết'
+        span: auto
+        type: text
+    title_sub:
+        label: 'Tiêu đề con (thuộc khối xoay)'
+        span: auto
+        type: text
+    title_product:
+        label: 'Tiêu đề sản phẩm (thuộc chương trình giáo dục)'
+        span: auto
+        type: text
+    content:
+        label: 'Nội dung'
+        size: huge
+        span: auto
+        cssClass: ''
+        hidden: 0
+        type: textarea
+tabs:
+    fields:
+        url1:
+            label: Link1
+            span: auto
+            type: text
+            tab: 'Sản phẩm thuộc chương trình giáo dục'
+        image1:
+            label: 'Ảnh sản phẩm 1'
+            mode: image
+            imageWidth: '100'
+            imageHeight: '100'
+            span: auto
+            type: mediafinder
+            tab: 'Sản phẩm thuộc chương trình giáo dục'
+        url2:
+            label: 'Link 2'
+            span: auto
+            type: text
+            tab: 'Sản phẩm thuộc chương trình giáo dục'
+        image2:
+            label: 'Ảnh sản phẩm 2'
+            mode: image
+            imageWidth: '100'
+            imageHeight: '100'
+            span: auto
+            type: mediafinder
+            tab: 'Sản phẩm thuộc chương trình giáo dục'
+        url3:
+            label: 'Link 3'
+            span: auto
+            type: text
+            tab: 'Sản phẩm thuộc chương trình giáo dục'
+        image3:
+            label: 'Ảnh sản phẩm 3'
+            mode: image
+            imageWidth: '100'
+            imageHeight: '100'
+            span: auto
+            type: mediafinder
+            tab: 'Sản phẩm thuộc chương trình giáo dục'
+        url4:
+            label: 'Link 4'
+            span: auto
+            type: text
+            tab: 'Sản phẩm thuộc chương trình giáo dục'
+        image4:
+            label: 'Ảnh sản phẩm 4'
+            mode: image
+            imageWidth: '100'
+            imageHeight: '100'
+            span: auto
+            type: mediafinder
+            tab: 'Sản phẩm thuộc chương trình giáo dục'

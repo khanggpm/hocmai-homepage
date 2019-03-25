@@ -1,0 +1,51 @@
+[settings]
+==
+<div class="background-left1"></div>
+<div class="background-left2"></div>
+<div class="container">
+    {% for set in setting %}
+    <div class="logo ft-child">
+        <a href="#">
+            <img src="{{'assets/images/logo-fter.png'|theme}}">
+        </a>
+    </div>
+    <div class="group-contact-child">
+        <div class="item-contact-ft address">
+            <div class="img"><img src="{{'assets/images/icon-location.png'|theme}}"></div>
+            <div class="content">
+                <p>{{ set.address }}</p>
+            </div>
+        </div>
+        <div class="group-ft-right-child clear">
+            <div class="item-contact-ft">
+                <div class="img"><img src="{{'assets/images/icon-call.png'|theme}}"></div>
+                <div class="content">
+                    <a href="#">{{ set.home_phone }}</a>
+                </div>
+            </div>
+            <div class="item-contact-ft">
+                <div class="img"><img src="{{'assets/images/icon-mail.png'|theme}}"></div>
+                <div class="content">
+                    <a href="#">{{ set.mail }}</a>
+                </div>
+            </div>
+            <div class="item-contact-ft">
+                <div class="img"><img src="{{'assets/images/icon-fax.png'|theme}}"></div>
+                <div class="content">
+                    <a href="#">{{ set.mobile_phone }}</a>
+                </div>
+            </div>
+            <div class="follow-ft clear">
+                <h3 class="title">Kết nối với chúng tôi</h3>
+                <div class="group-follow">
+                    <ul class="list-follow">
+                        <li><a href="{{ set.fb_link }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="{{ set.zalo_link }}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="{{ set.youtube_link }}"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

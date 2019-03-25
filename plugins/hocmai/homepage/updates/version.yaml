@@ -1,0 +1,62 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table hocmai_homepage_info'
+    - builder_table_create_hocmai_homepage_info.php
+1.0.3:
+    - 'Updated table hocmai_homepage_info'
+    - builder_table_update_hocmai_homepage_info.php
+1.0.4:
+    - 'Updated table hocmai_homepage_info'
+    - builder_table_update_hocmai_homepage_info_2.php
+1.0.5:
+    - 'Updated table hocmai_homepage_info'
+    - builder_table_update_hocmai_homepage_info_3.php
+1.0.6:
+    - 'Created table hocmai_homepage_products'
+    - builder_table_create_hocmai_homepage_products.php
+1.0.7:
+    - 'Updated table hocmai_homepage_products'
+    - builder_table_update_hocmai_homepage_products.php
+1.0.8:
+    - 'Updated table hocmai_homepage_products'
+    - builder_table_update_hocmai_homepage_products_2.php
+1.0.9:
+    - 'Updated table hocmai_homepage_products'
+    - builder_table_update_hocmai_homepage_products_3.php
+1.0.10:
+    - 'Created table hocmai_homepage_'
+    - builder_table_create_hocmai_homepage_.php
+1.0.11:
+    - 'Updated table hocmai_homepage_'
+    - builder_table_update_hocmai_homepage_info_products.php
+1.0.12:
+    - 'Created table hocmai_homepage_partner'
+    - builder_table_create_hocmai_homepage_partner.php
+1.0.13:
+    - 'Created table hocmai_homepage_settings'
+    - builder_table_create_hocmai_homepage_settings.php
+1.0.14:
+    - 'Created table hocmai_homepage_events'
+    - builder_table_create_hocmai_homepage_events.php
+1.0.15:
+    - 'Updated table hocmai_homepage_events'
+    - builder_table_update_hocmai_homepage_events.php
+1.0.16:
+    - 'Updated table hocmai_homepage_events'
+    - builder_table_update_hocmai_homepage_events_2.php
+1.0.17:
+    - 'Updated table hocmai_homepage_info'
+    - builder_table_update_hocmai_homepage_info_4.php
+1.0.18:
+    - 'Updated table hocmai_homepage_info'
+    - builder_table_update_hocmai_homepage_info_5.php
+1.0.19:
+    - 'Updated table hocmai_homepage_settings'
+    - builder_table_update_hocmai_homepage_settings.php
+1.0.20:
+    - 'Updated table hocmai_homepage_info'
+    - builder_table_update_hocmai_homepage_info_6.php
+1.0.21:
+    - 'Updated table hocmai_homepage_info'
+    - builder_table_update_hocmai_homepage_info_7.php

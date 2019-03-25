@@ -1,0 +1,10 @@
+name: Info
+form: $/hocmai/homepage/models/info/fields.yaml
+modelClass: hocmai\Homepage\Models\Info
+defaultRedirect: hocmai/homepage/info
+create:
+    redirect: 'hocmai/homepage/info/update/:id'
+    redirectClose: hocmai/homepage/info
+update:
+    redirect: hocmai/homepage/info
+    redirectClose: hocmai/homepage/info

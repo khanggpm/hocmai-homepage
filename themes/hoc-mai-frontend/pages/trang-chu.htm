@@ -1,0 +1,919 @@
+title = "Trang chủ"
+url = "/"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[info]
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="{{'assets/js/bootstrap/css/bootstrap.min.css'|theme}}">
+    <link rel="stylesheet" type="text/css" href="{{'assets/js/swiper/swiper.min.css'|theme}}">
+    <link rel="stylesheet" type="text/css" href="{{'assets/js/fullpage/fullpage.css'|theme}}">
+    <link rel="stylesheet" href="{{'assets/css/style.css'|theme}}" media="all">
+    <link rel="stylesheet" href="{{'assets/css/responsive.css'|theme}}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{'assets/css/animate.css'|theme}}" media="all">
+
+    <script src="{{'assets/js/jquery-1.9.1.min.js'|theme}}"></script>
+    <script src="{{'assets/js/bootstrap/js/bootstrap.min.js'|theme}}"></script>
+</head>
+<body class="page">
+<header id="header">
+    <div class="wrap-tool" style="background-image: url(/{{ 'assets/images/background-menu-child.jpg'|theme}});">
+        <div class="container">
+            <button class="navbar-toggle1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="logo">
+                <a href="">
+                    <img class="blue" src="{{ 'assets/images/logo.png'|theme}}">
+                    <img class="white" src="{{ 'assets/images/logo-white.png'|theme}}">
+                </a>
+            </div>
+           <!--  <div class="menu-group">
+                <div class="menu-group-bg2"></div>
+                <div class="menu-group-bg1"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="menu-header">
+                            <div class="col-md-5">
+                                <div class="col-md-4">
+                                    <h3 class="title">TIN TỨC</h3>
+                                    <div class="group-menu-chil">
+                                        <ul class="list-menu-chil">
+                                            <li><a href="#">Tin HOCMAI</a></li>
+                                            <li><a href="#">Tin báo chí</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h3 class="title">
+                                        CHƯƠNG TRÌNH GIÁO DỤC
+                                    </h3>
+                                    <div class="group-child">
+                                        <ul class="list-menu-chil">
+                                            <li><a href="">Giáo dục trực tuyến</a></li>
+                                            <li><a href="">Hệ thống trung tâm học tập</a></li>
+                                            <li><a href="">Trường liên cấp</a></li>
+                                            <li><a href="">Đào tạo kỹ năng và hoạt động trải nghiệm</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="col-md-6">
+                                    <img class="title" src="{{ 'assets/images/logo-menu.png'|theme}}">
+                                    <ul class="list-menu-chil">
+                                        <li><a href="">Câu chuyện thương hiệu</a>
+                                        </li>
+                                        <li><a href="">Tầm nhìn - Sứ mệnh - Giá trị cốt lõi</a>
+                                        </li>
+                                        <li><a href="">Lịch sử hình thành</a>
+                                        </li>
+                                        <li><a href="">Đơn vị thành viên</a>
+                                        </li>
+                                        <li><a href="">Thành tựu đạt được</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <h3 class="title">
+                                        TUYỂN DỤNG
+                                    </h3>
+                                    <div class="group-child">
+                                        <ul class="list-menu-chil">
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <h3 class="title">LIÊN HỆ</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Menu -->
+            {% partial 'menu' %}
+            
+        </div>
+    </div>
+</header>
+<main id="main-wrap">
+    <div class="group-btn-down">
+        <ul class="list-btn-down" id="menu">
+            <li data-menuanchor="page-1">
+                <a href="#page-1">
+                    <img class="icon-down1 btn-down" src="{{ 'assets/images/icon-down1.png'|theme}}">
+                    <img class="icon-down4 btn-down" src="{{ 'assets/images/icon-down4.png'|theme}}">
+                    <img class="icon-down btn-down" src="{{ 'assets/images/icon-down.png'|theme}}">
+                    <img class="icon-down3 btn-down" src="{{ 'assets/images/icon-down3.png'|theme}}">
+                </a>
+            </li>
+            <li data-menuanchor="page-2">
+                <a href="#page-2">
+                    <img class="icon-down1 btn-down" src="{{ 'assets/images/icon-down1.png'|theme}}">
+                    <img class="icon-down4 btn-down" src="{{ 'assets/images/icon-down4.png'|theme}}">
+                    <img class="icon-down btn-down" src="{{ 'assets/images/icon-down.png'|theme}}">
+                    <img class="icon-down3 btn-down" src="{{ 'assets/images/icon-down3.png'|theme}}">
+                </a>
+            </li>
+            <li data-menuanchor="page-3">
+                <a href="#page-3">
+                    <img class="icon-down1 btn-down" src="{{ 'assets/images/icon-down1.png'|theme}}">
+                    <img class="icon-down4 btn-down" src="{{ 'assets/images/icon-down4.png'|theme}}">
+                    <img class="icon-down btn-down" src="{{ 'assets/images/icon-down.png'|theme}}">
+                    <img class="icon-down3 btn-down" src="{{ 'assets/images/icon-down3.png'|theme}}">
+                </a>
+            </li>
+            <li data-menuanchor="page-footer">
+                <a href="#page-footer">
+                    <img class="icon-down1 btn-down" src="{{ 'assets/images/icon-down1.png'|theme}}">
+                    <img class="icon-down4 btn-down" src="{{ 'assets/images/icon-down4.png'|theme}}">
+                    <img class="icon-down btn-down" src="{{ 'assets/images/icon-down.png'|theme}}">
+                    <img class="icon-down3 btn-down" src="{{ 'assets/images/icon-down3.png'|theme}}">
+                </a>
+            </li>
+            <li>
+                <a class="move-down-button" id="scroll-down">
+                    <span class="border-befor"></span>
+                    <span>Kéo xuống <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="fullPage">
+    {% component 'info' %}
+       <!--  <div class="section section-1" id="section1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-4">
+                        <div class="banner-group">
+                            <div class="swiper-container banner-bg">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" style="background-image:url({{ 'assets/images/banner1.jpg'|theme}})"></div>
+                                    <div class="swiper-slide"
+                                         style="background-image:url({{ 'assets/images/banner2.jpg'|theme}}); background-position: left"></div>
+                                    <div class="swiper-slide" style="background-image:url({{ 'assets/images/banner3.jpg'|theme}})"></div>
+                                    <div class="swiper-slide" style="background-image:url({{ 'assets/images/banner4.jpg'|theme}})"></div>
+                                    <div class="swiper-slide" style="background-image:url({{ 'assets/images/banner5.jpg'|theme}})"></div>
+                                </div>
+                            </div>
+
+                            <div class="slider-sub swiper-container">
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide group-banner-sub">
+                                        <div class="banner-sub" style="background-image: url({{ 'assets/images/backgroundh.png'|theme}});">
+                                            <div class="banner-sub-content wow" data-wow-type="fadeInUp">
+                                                <div class="content-sub">
+                                                    <p class="title-top">HỆ THỐNG GIÁO DỤC</p>
+                                                    <div class="group-title-border">
+                                                        <h3 class="title-big">HOCMAI</h3>
+                                                        <div class="bd-title-sub"></div>
+                                                    </div>
+                                                    <p class="desc">Hơn 10 năm hoạt động, <span>HO</span>CMAI đã tạo
+                                                        dựng
+                                                        được vị thế hàng đầu
+                                                        tại Việt Nam về cung cấp các dịch vụ giáo dục trực tuyến...</p>
+                                                </div>
+                                                <div class="btn-banner-sub"><a class="btn-seemore" href="#">Tìm hiểu
+                                                    thêm <span class="icon"><i
+                                                            class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide group-banner-sub">
+                                        <div class="banner-sub" style="background-image: url({{ 'assets/images/backgroundh.png'|theme}});">
+                                            <div class="banner-sub-content wow" data-wow-type="fadeInUp">
+                                                <div class="content-sub">
+                                                    <p class="title-top">TẦM NHÌN - SỨ MỆNH</p>
+                                                    <div class="group-title-border">
+                                                        <h3 class="title-big">GIÁ TRỊ CỐT LÕI</h3>
+                                                        <div class="bd-title-sub"></div>
+                                                    </div>
+                                                    <p class="desc">Với khát vọng cải tiến nền giáo dục, HOCMAI chủ động
+                                                        đi tiên phong
+                                                        về sáng tạo, đổi mới phương pháp, công nghệ dạy và học...</p>
+                                                </div>
+                                                <div class="btn-banner-sub"><a class="btn-seemore" href="#">Tìm hiểu
+                                                    thêm <span class="icon"><i
+                                                            class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide group-banner-sub">
+                                        <div class="banner-sub" style="background-image: url({{ 'assets/images/backgroundh.png'|theme}});">
+                                            <div class="banner-sub-content wow" data-wow-type="fadeInUp">
+                                                <div class="content-sub">
+                                                    <div class="group-title-border">
+                                                        <h3 class="title-big">HÀNH TRÌNH 12 NĂM</h3>
+                                                        <div class="bd-title-sub"></div>
+                                                    </div>
+                                                    <p class="desc">Đi qua chặng đường 12 năm, HOCMAI đã để lại nhiều dấu ấn trong
+                                                        sự nghiệp dạy và học, góp phần thay đổi nền giáo dục Việt Nam...</p>
+                                                </div>
+                                                <div class="btn-banner-sub"><a class="btn-seemore" href="#">Tìm hiểu
+                                                    thêm <span class="icon"><i
+                                                            class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide group-banner-sub">
+                                        <div class="banner-sub" style="background-image: url({{ 'assets/images/backgroundh.png'|theme}});">
+                                            <div class="banner-sub-content wow" data-wow-type="fadeInUp">
+                                                <div class="content-sub">
+                                                    <div class="group-title-border">
+                                                        <h3 class="title-big">ĐƠN VỊ THÀNH VIÊN</h3>
+                                                        <div class="bd-title-sub"></div>
+                                                    </div>
+                                                    <p class="desc">HOCMAI gồm 03 thành viên: Công ty CP dịch vụ giáo dục Việt Nam,
+                                                        Công ty CP dịch vụ Endifit, Công ty CP Giáo dục Edmicro...</p>
+                                                </div>
+                                                <div class="btn-banner-sub"><a class="btn-seemore" href="#">Tìm hiểu
+                                                    thêm <span class="icon"><i
+                                                            class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide group-banner-sub">
+                                        <div class="banner-sub" style="background-image: url({{ 'assets/images/backgroundh.png'|theme}});">
+                                            <div class="banner-sub-content wow" data-wow-type="fadeInUp">
+                                                <div class="content-sub">
+                                                    <div class="group-title-border">
+                                                        <h3 class="title-big">ĐƠN VỊ LIÊN KẾT</h3>
+                                                        <div class="bd-title-sub"></div>
+                                                    </div>
+                                                    <p class="desc">HOCMAI liên kết với Hệ thống Trung tâm học tập chủ động Galileo
+                                                        và Trường phổ thông liên cấp H.A.S tạo nên hệ sinh thái giáo dục...</p>
+                                                </div>
+                                                <div class="btn-banner-sub"><a class="btn-seemore" href="#">Tìm hiểu
+                                                    thêm <span class="icon"><i
+                                                            class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-2" id="section2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="section2-left">
+
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="section2-right">
+                            <h3 class="title-section">
+                                <span class="cube"></span><span class="title">CHƯƠNG TRÌNH GIÁO DỤC</span>
+                            </h3>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-container group-slider-program">
+                                <div class="swiper-wrapper group-programe wow">
+                                    <div class="swiper-slide item-slide-programe"
+                                         style=" background-image: url({{ 'assets/images/backgroundsection.png'|theme}});">
+                                        <div class="wow" data-wow-type="fadeInRight">
+                                            <div class="title">
+                                            <a href="#">HOCMAI.VN - HỌC TRỰC TUYẾN THEO LỘ TRÌNH</a>
+                                            </div>
+                                            <p class="desc">Bước vào hoạt động từ năm 2007, Hocmai.vn là dịch vụ giáo
+                                                dục trực tuyến đầu tiên dành riêng cho học sinh phổ thông từ lớp 1
+                                                đến lớp 12. Tới nay, Hocmai.vn đã vượt mốc 3.3 triệu thành viên, chính
+                                                thức trở thành cộng đồng học tập trực tuyến số 1 tại Việt Nam.
+                                            </p>
+                                            <div class="list-item-programe">
+                                                <h3 class="name">Các sản phẩm nổi bật:</h3>
+                                                <ul class="list-item-pro wow" data-wow-type="fadeInRight">
+                                                    <li>
+                                                        <div class="item-programe">
+                                                            <a href="">
+                                                                <img src="{{ 'assets/images/object1.png'|theme}}">
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item-programe">
+                                                            <a href="">
+                                                                <img src="{{ 'assets/images/object12.png'|theme}}">
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item-programe">
+                                                            <a href="">
+                                                                <img src="{{ 'assets/images/object13.png'|theme}}">
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item-programe">
+                                                            <a href="">
+                                                                <img src="{{ 'assets/images/object14.png'|theme}}">
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide item-slide-programe"
+                                         style=" background-image: url({{ 'assets/images/backgroundsection2.jpg'|theme}});">
+                                        <div class="wow" data-wow-type="fadeInRight">
+                                            <div class="title">
+                                            <a>Hochay.vn - Học tập thích ứng & phát triển năng lực</a>
+                                            </div>
+                                            <p class="desc">Hochay.vn là ứng dụng học Toán trực quan giúp học sinh từ
+                                                lớp mẫu giáo đến lớp 3 tiếp cận từng đơn vị kiến thức một cách mới mẻ và
+                                                thú vị, đồng thời giúp phụ huynh dễ dàng đồng hành và hỗ trợ con trong
+                                                học tập.
+                                            </p>
+                                            <div class="list-item-programe">
+                                                <h3 class="name">Các đặc điểm nổi trội của Hochay.vn:</h3>
+                                                <ul class="list-item-pro">
+                                                    <li>
+                                                        <div class="item-programe">
+                                                            <a href="">
+                                                                <img src="{{ 'assets/images/object21.png'|theme}}">
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item-programe">
+                                                            <a href="">
+                                                                <img src="{{ 'assets/images/object22.png'|theme}}">
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item-programe">
+                                                            <a href="">
+                                                                <img src="{{ 'assets/images/object23.png'|theme}}">
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item-programe">
+                                                            <a href="">
+                                                                <img src="{{ 'assets/images/object24.png'|theme}}">
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide item-slide-programe"
+                                         style=" background-image: url({{ 'assets/images/backgroundsection3.jpg'|theme}} );">
+                                        <div class="wow" data-wow-type="fadeInRight">
+                                            <div class="title"><a href="#">SPEAKUP.VN - HỌC TẬP CÁ NHÂN HÓA</a></div>
+                                            <p class="desc">Speakup.vn là mô hình học tiếng Anh giao tiếp 1 kèm 1 trực
+                                                tuyến với 100% giáo viên bản ngữ. Khác với nhiều đơn vị cung cấp dịch vụ
+                                                học tiếng Anh trực tuyến hiện nay trên thị trường, giáo trình tại
+                                                Speakup.vn được cá nhân hóa theo trình độ và mục tiêu của học sinh.
+                                            </p>
+                                            <div class="list-item-programe">
+                                                <h3 class="name">Các đặc điểm nổi trội của Speakup.vn:</h3>
+                                                <ul class="list-item-pro">
+                                                    <li>
+                                                        <div class="item-programe">
+                                                            <a href="">
+                                                                <img src="{{ 'assets/images/object31.jpg'|theme}}">
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item-programe">
+                                                            <a href="">
+                                                                <img src="{{ 'assets/images/object32.jpg'|theme}}">
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item-programe">
+                                                            <a href="">
+                                                                <img src="{{ 'assets/images/object33.jpg'|theme}}">
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide item-slide-programe"
+                                         style=" background-image: url({{ 'assets/images/backgroundsection4.jpg'|theme}});">
+                                        <div class="wow" data-wow-type="fadeInRight">
+                                            <div class="title"> <a href="#">CÁC KHÓA HỌC BỔ TRỢ</a></div>
+                                            <p class="desc">Các khóa học bổ trợ trực tuyến được HOCMAI xây dựng nhằm
+                                                hoàn thiện kiến thức và kỹ năng, phương pháp học tập cho học sinh phổ
+                                                thông
+                                                từ lớp 1 đến lớp 12. Các khóa học bổ trợ được phân thành 02 nhóm: khóa
+                                                học bổ trợ kiến thức và khóa học bổ trợ kỹ năng, phương pháp học tập.
+                                            </p>
+                                            <div class="list-item-programe">
+                                                <h3 class="name">Ưu điểm của các khóa học bổ trợ:</h3>
+                                                <ul class="list-item-pro">
+                                                    <li>
+                                                        <div class="item-programe">
+                                                            <a href="">
+                                                                <img src="{{ 'assets/images/object41.jpg'|theme}}">
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item-programe">
+                                                            <a href="">
+                                                                <img src="{{ 'assets/images/object43.jpg'|theme}}">
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item-programe">
+                                                            <a href="">
+                                                                <img src="{{ 'assets/images/object42.jpg'|theme}}">
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        
+        <div class="section section-3" id="section3">
+            <div class="background-brand">
+            </div>
+            <div class="container">
+                <h3 class="sec-title">ĐỐI TÁC</h3>
+                <div class="group-partner">
+                    <!--<ul class="list-partner">-->
+                        <!--<li class="wow" data-wow-type="fadeInUp">-->
+                            <!--<div class="item-partner">-->
+                                <!--<a href=""><img src="{{ 'assets/images/logo-new/logo1.png'|theme}}"></a>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li class="wow" data-wow-type="fadeInUp">-->
+                            <!--<div class="item-partner">-->
+                                <!--<a href=""><img src="{{ 'assets/images/logo-new/logo2.png'|theme}}"></a>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li class="wow" data-wow-type="fadeInUp">-->
+                            <!--<div class="item-partner">-->
+                                <!--<a href=""><img src="{{ 'assets/images/logo-new/logo3.png'|theme}}"></a>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li class="wow" data-wow-type="fadeInUp">-->
+                            <!--<div class="item-partner">-->
+                                <!--<a href=""><img src="{{ 'assets/images/logo-new/logo4.png'|theme}}"></a>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                    <!--<ul class="list-partner">-->
+                        <!--<li class="wow" data-wow-type="fadeInUp">-->
+                            <!--<div class="item-partner">-->
+                                <!--<a href=""><img src="{{ 'assets/images/logo-new/logo5.png'|theme}}"></a>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li class="wow" data-wow-type="fadeInUp">-->
+                            <!--<div class="item-partner">-->
+                                <!--<a href=""><img src="{{ 'assets/images/logo-new/logo6.png'|theme}}"></a>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li class="wow" data-wow-type="fadeInUp">-->
+                            <!--<div class="item-partner">-->
+                                <!--<a href=""><img src="{{ 'assets/images/logo-new/logo7.png'|theme}}"></a>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li class="wow" data-wow-type="fadeInUp">-->
+                            <!--<div class="item-partner">-->
+                                <!--<a href=""><img src="{{ 'assets/images/logo-new/logo8.png'|theme}}"></a>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                    <!--<ul class="list-partner">-->
+                        <!--<li class="wow" data-wow-type="fadeInUp">-->
+                            <!--<div class="item-partner">-->
+                                <!--<a href=""><img src="{{ 'assets/images/logo-new/logo9.png'|theme}}"></a>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li class="wow" data-wow-type="fadeInUp">-->
+                            <!--<div class="item-partner">-->
+                                <!--<a href=""><img src="{{ 'assets/images/logo-new/logo10.png'|theme}}"></a>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li class="wow" data-wow-type="fadeInUp">-->
+                            <!--<div class="item-partner">-->
+                                <!--<a href=""><img src="{{ 'assets/images/logo-new/logo11.png'|theme}}"></a>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li class="wow" data-wow-type="fadeInUp">-->
+                            <!--<div class="item-partner">-->
+                                <!--<a href=""><img src="{{ 'assets/images/logo-new/logo12.png'|theme}}"></a>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                    <ul class="list-partner">
+                        <li class="wow" data-wow-type="fadeInUp">
+                            <div class="item-partner">
+                                <a href=""><img src="{{ 'assets/images/logo-new/logo1.jpg'|theme}}"></a>
+                            </div>
+                        </li>
+                        <li class="wow" data-wow-type="fadeInUp">
+                            <div class="item-partner">
+                                <a href=""><img src="{{ 'assets/images/logo-new/logo2.jpg'|theme}}"></a>
+                            </div>
+                        </li>
+                        <li class="wow" data-wow-type="fadeInUp">
+                            <div class="item-partner">
+                                <a href=""><img src="{{ 'assets/images/logo-new/logo3.jpg'|theme}}"></a>
+                            </div>
+                        </li>
+                        <li class="wow" data-wow-type="fadeInUp">
+                            <div class="item-partner">
+                                <a href=""><img src="{{ 'assets/images/logo-new/logo4.jpg'|theme}}"></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list-partner">
+                        <li class="wow" data-wow-type="fadeInUp">
+                            <div class="item-partner">
+                                <a href=""><img src="{{ 'assets/images/logo-new/logo5.jpg'|theme}}"></a>
+                            </div>
+                        </li>
+                        <li class="wow" data-wow-type="fadeInUp">
+                            <div class="item-partner">
+                                <a href=""><img src="{{ 'assets/images/logo-new/logo6.jpg'|theme}}"></a>
+                            </div>
+                        </li>
+                        <li class="wow" data-wow-type="fadeInUp">
+                            <div class="item-partner">
+                                <a href=""><img src="{{ 'assets/images/logo-new/logo7.jpg'|theme}}"></a>
+                            </div>
+                        </li>
+                        <li class="wow" data-wow-type="fadeInUp">
+                            <div class="item-partner">
+                                <a href=""><img src="{{ 'assets/images/logo-new/logo8.jpg'|theme}}"></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list-partner">
+                        <li class="wow" data-wow-type="fadeInUp">
+                            <div class="item-partner">
+                                <a href=""><img src="{{ 'assets/images/logo-new/logo9.jpg'|theme}}"></a>
+                            </div>
+                        </li>
+                        <li class="wow" data-wow-type="fadeInUp">
+                            <div class="item-partner">
+                                <a href=""><img src="{{ 'assets/images/logo-new/logo10.jpg'|theme}}"></a>
+                            </div>
+                        </li>
+                        <li class="wow" data-wow-type="fadeInUp">
+                            <div class="item-partner">
+                                <a href=""><img src="{{ 'assets/images/logo-new/logo11.jpg'|theme}}"></a>
+                            </div>
+                        </li>
+                        <li class="wow" data-wow-type="fadeInUp">
+                            <div class="item-partner">
+                                <a href=""><img src="{{ 'assets/images/logo-new/logo12.jpg'|theme}}"></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer id="footer" class="section section-4 footer">
+            <div class="background-left1"></div>
+            <div class="background-left2"></div>
+            <div></div>
+            <div class="container">
+                <div class="group-footer">
+                    <div class="row">
+                        <div class="row-child">
+                            <div class="col-md-5">
+                                <div class="group-new-bot">
+                                    <div class="title-child-ft">
+                                        <h3>TIN TỨC</h3>
+                                        <div class="group-new-ft">
+                                            <ul class="list-new-ft clear">
+                                                <li>
+                                                    <div class="item-new-ft">
+                                                        <div class="img">
+                                                            <a style="background-image: url({{ 'assets/images/new1.jpg'|theme}});" href="chitiet_tintuc.html"></a>
+                                                        </div>
+                                                        <div class="content">
+                                                            <a href="#" class="title">Những “trái ngọt” từ chương trình
+                                                                Chào Tân sinh viên</a>
+                                                            <p class="desc">Có được lối sống chủ động, khả năng học tập
+                                                                tự định
+                                                                hướng và sự can đảm dám đi đến tận cùng với đam mê.</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item-new-ft">
+                                                        <div class="img">
+                                                            <a style="background-image: url({{ 'assets/images/new1.jpg'|theme}});" href="chitiet_tintuc.html"></a>
+                                                        </div>
+                                                        <div class="content">
+                                                            <a href="#" class="title">Những “trái ngọt” từ chương trình
+                                                                Chào Tân sinh viên</a>
+                                                            <p class="desc">Có được lối sống chủ động, khả năng học tập
+                                                                tự định
+                                                                hướng và sự can đảm dám đi đến tận cùng với đam mê.</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item-new-ft">
+                                                        <div class="img">
+                                                            <a style="background-image: url({{ 'assets/images/new1.jpg'|theme}});" href="chitiet_tintuc.html"></a>
+                                                        </div>
+                                                        <div class="content">
+                                                            <a href="#" class="title">Những “trái ngọt” từ chương trình
+                                                                Chào Tân sinh viên</a>
+                                                            <p class="desc">Có được lối sống chủ động, khả năng học tập
+                                                                tự định
+                                                                hướng và sự can đảm dám đi đến tận cùng với đam mê.</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="content-footer-child">
+                                    <div class="logo-ft">
+                                        <a href=""><img src="{{ 'assets/images/logo-ft.png'|theme}}"></a>
+                                    </div>
+                                    <div class="info-contact clear">
+                                        <div class="item-contact-ft">
+                                            <div class="img"><img src="{{ 'assets/images/icon-location.png'|theme}}"></div>
+                                            <div class="content">
+                                                <p>Tầng 4, Tòa nhà 25T2, Đường Nguyễn Thị Thập, Phường Trung Hoà, Quận
+                                                    Cầu
+                                                    Giấy, Hà Nội.</p>
+                                            </div>
+                                        </div>
+                                        <div class="item-contact-ft">
+                                            <div class="img"><img src="{{ 'assets/images/icon-call.png'|theme}}"></div>
+                                            <div class="content">
+                                                <a href="#">(024) 3519-0591</a>
+                                            </div>
+                                        </div>
+                                        <div class="item-contact-ft">
+                                            <div class="img"><img src="{{ 'assets/images/icon-mail.png'|theme}}"></div>
+                                            <div class="content">
+                                                <a href="#">info@<span>HO</span>CMAI.edu.vn</a>
+                                            </div>
+                                        </div>
+                                        <div class="item-contact-ft">
+                                            <div class="img"><img src="{{ 'assets/images/icon-fax.png'|theme}}"></div>
+                                            <div class="content">
+                                                <a href="#">+84 (24) 3519-0587</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="follow-ft index clear">
+                                        <h3 class="title">Kết nối với chúng tôi</h3>
+                                        <div class="group-follow">
+                                            <ul class="list-follow">
+                                                <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                </li>
+                                                <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                                </li>
+                                                <li><a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-contact-ft">
+                                    <div class="title-child-ft">
+                                        <h3><i class="fa fa-pencil-square-o" aria-hidden="true"></i>LIÊN HỆ</h3>
+                                        <div class="form">
+                                            <input class="f-control" type="text" name="name" placeholder="Họ tên">
+                                            <input class="f-control" type="text" name="name"
+                                                   placeholder="Số điện thoại">
+                                            <input class="f-control" type="text" name="name" placeholder="Email">
+                                            <textarea class="f-control big" type="text" name="name"
+                                                      placeholder="Nội dung yêu cầu"></textarea>
+                                            <div class="btn-submit-ft">
+                                                <a class="btn-a" href="#">Gửi <span class="icon"><i
+                                                        class="fa fa-paper-plane" aria-hidden="true"></i></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</main>
+
+<script src="{{ 'assets/js/master.js'|theme }}"></script>
+<script type="text/javascript" src="{{ 'assets/js/wow.min.js'|theme }}"></script>
+<script type="text/javascript" src="{{ 'assets/js/swiper/swiper.min.js'|theme }}"></script>
+<script type="text/javascript" src="{{ 'assets/js/fullpage/fullpage.js'|theme }}"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        function wow_current(current) {
+            var cur = $(current);
+            var cur_delay = cur.data('wowDelay');
+            var cur_time = cur.data('wowDuration');
+            if (cur_time != '') {
+                cur.css({
+                    '-webkit-animation-duration': cur_time,
+                    'animation-duration': cur_time
+                });
+            }
+            if (cur_delay != '') {
+                cur.css({
+                    '-webkit-animation-delay': cur_delay,
+                    'animation-delay': cur_delay
+                });
+            }
+        }
+
+        $('.wow').each(function () {
+            wow_current(this);
+        });
+
+        $('.section-3').find('.wow').each(function () {
+            $(this).addClass('animated');
+        });
+
+        $('.section').not('.section-1').find('.wow').each(function () {
+            var effect = $(this).data('wowType');
+            $(this).removeClass(effect);
+        });
+
+
+// banner-slider-cube
+        var swiper = new Swiper('.swiper-container.banner-bg', {
+            effect: 'cube',
+            grabCursor: true,
+            speed: 1300,
+            simulateTouch: false,
+            followFinger: false,
+            shortSwipes: false,
+            longSwipes: false,
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 1,
+            },
+            pagination: {
+                el: '.slider-sub .swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span data-slide="' + (index + 1) + '" class="' + className + '"><span class="number">0' + (index + 1) + '</span>.</span>';
+                },
+            },
+        });
+        var swiper2 = new Swiper('.slider-sub', {
+            simulateTouch: false,
+            speed: 1000,
+            followFinger: false,
+            shortSwipes: false,
+            longSwipes: false,
+            pagination: {
+                el: '.slider-sub .swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span data-slide="' + (index + 1) + '" class="' + className + '"><span class="number">0' + (index + 1) + '</span>.</span>';
+                },
+            },
+        });
+
+        var swiper3 = new Swiper('.swiper-container.group-slider-program', {
+            pagination: {
+                el: '.section2-right .swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span data-slide="' + (index + 1) + '" class="' + className + '"><span class="number">0' + (index + 1) + '</span>.</span>';
+                },
+            },
+        });
+
+
+        $(".btn-change-sub").click(function () {
+            $(".btn-change-sub").removeClass("active");
+            $(this).addClass("active");
+
+        });
+
+// fullpage
+        var screen_width = $(window).width();
+        if (screen_width > 1024) {
+            var Fullpage = new fullpage('#fullPage', {
+                anchors: ['page-1', 'page-2', 'page-3', 'page-footer'],
+                menu: '#menu',
+                easingcss3: 'ease-in-out',
+                onLeave: function (index, nextIndex, direction) {
+                    var ft = nextIndex["anchor"];
+                    if (ft == "page-footer") {
+                        $("#scroll-down").css("display", "none");
+                    }
+                    else {
+                        $("#scroll-down").css("display", "");
+                    }
+                    if (ft == "page-3") {
+                        $('.section-3').find('.wow').each(function () {
+                            var effect = $(this).data('wowType');
+                            $(this).addClass(effect + ' animated');
+                        });
+                    }
+                    else {
+                        $('.section-3').find('.wow').each(function () {
+                            var effect = $(this).data('wowType');
+                            $(this).removeClass(effect + ' animated');
+                        });
+                    }
+                    if (ft == "page-1") {
+                        $('.section-1').find('.wow').each(function () {
+                            var effect = $(this).data('wowType');
+                            $(this).addClass(effect + ' animated');
+                        });
+                    }
+                    else {
+                        $('.section-1').find('.wow').each(function () {
+                            var effect = $(this).data('wowType');
+                            $(this).removeClass(effect + ' animated');
+                        });
+                    }
+                    if (ft == "page-2") {
+                        $('.section-2').find('.wow').each(function () {
+                            var effect = $(this).data('wowType');
+                            $(this).addClass(effect + ' animated');
+                        });
+                    }
+                    else {
+                        $('.section-2').find('.wow').each(function () {
+                            var effect = $(this).data('wowType');
+                            $(this).removeClass(effect + ' animated');
+                        });
+                    }
+
+                },
+            });
+        }
+        $("#scroll-down").click(function () {
+            fullpage_api.moveSectionDown();
+        });
+
+    });
+
+</script>
+</body>
+</html>

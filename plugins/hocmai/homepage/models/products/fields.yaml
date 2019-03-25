@@ -1,0 +1,16 @@
+fields:
+    url:
+        label: URL
+        span: auto
+        type: text
+    image:
+        label: 'Ảnh sản phẩm'
+        mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        span: auto
+        type: mediafinder
+    name:
+        label: 'Tên sản phẩm'
+        span: auto
+        type: text

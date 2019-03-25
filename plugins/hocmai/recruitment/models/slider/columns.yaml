@@ -1,0 +1,10 @@
+columns:
+    job_name:
+        label: 'Nghề nghiệp tuyển dụng'
+        type: text
+    rank:
+        label: 'Cấp bậc tuyển dụng'
+        type: text
+    order:
+        label: 'Vị trí'
+        type: text

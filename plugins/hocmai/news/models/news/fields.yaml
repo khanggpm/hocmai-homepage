@@ -1,0 +1,39 @@
+fields:
+    title:
+        label: 'Tiêu đề'
+        span: auto
+        required: 1
+        type: text
+    image:
+        label: 'Ảnh hiển thị'
+        mode: image
+        imageWidth: '120'
+        imageHeight: '160'
+        span: auto
+        type: mediafinder
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: tags
+            type: slug
+        type: text
+    tags:
+        label: Tag
+        span: auto
+        type: text
+    event_upcoming:
+        label: 'Sự kiện sắp diễn ra'
+        span: auto
+        type: switch
+    content:
+        label: 'Nội dung'
+        size: ''
+        span: full
+        type: richeditor
+    cate:
+        label: Category
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation

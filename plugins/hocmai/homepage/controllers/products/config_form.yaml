@@ -1,0 +1,10 @@
+name: Products
+form: $/hocmai/homepage/models/products/fields.yaml
+modelClass: hocmai\Homepage\Models\Products
+defaultRedirect: hocmai/homepage/products
+create:
+    redirect: 'hocmai/homepage/products/update/:id'
+    redirectClose: hocmai/homepage/products
+update:
+    redirect: hocmai/homepage/products
+    redirectClose: hocmai/homepage/products

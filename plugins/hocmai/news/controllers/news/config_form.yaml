@@ -1,0 +1,10 @@
+name: News
+form: $/hocmai/news/models/news/fields.yaml
+modelClass: hocmai\News\Models\News
+defaultRedirect: hocmai/news/news
+create:
+    redirect: 'hocmai/news/news/update/:id'
+    redirectClose: hocmai/news/news
+update:
+    redirect: hocmai/news/news
+    redirectClose: hocmai/news/news

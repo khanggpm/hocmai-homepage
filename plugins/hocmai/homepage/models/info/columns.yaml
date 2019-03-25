@@ -1,0 +1,20 @@
+columns:
+    id:
+        label: ID
+        type: number
+    image:
+        label: 'Ảnh hiển thị'
+        type: partial
+        searchable: true
+        path: ~/plugins/hocmai/homepage/models/info/_image.htm
+    title:
+        label: 'Tiêu đề'
+        type: text
+    title_sub:
+        label: 'Tiêu đề con'
+        type: text
+    status :
+        label: 'Loại hiển thị'
+        type: partial
+        searchable: true
+        path: ~/plugins/hocmai/homepage/models/info/_status.htm

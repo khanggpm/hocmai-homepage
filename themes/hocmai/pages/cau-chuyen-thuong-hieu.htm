@@ -1,0 +1,35 @@
+url = "/cau-chuyen-thuong-hieu"
+title_small = 'CÂU CHUYỆN'
+title_big = 'THƯƠNG HIỆU'
+title = 'Câu chuyện thương hiệu'
+layout = 'default'
+
+==
+<div class="sec-link-unit sec-container">
+    <div class="container">
+    	<div class="detail-new">
+	    	
+		</div>
+        <div class="img-link-download text-center">
+            <a href=""><img src="{{ 'assets/images/ic_download.png'|theme}}"></a>
+        </div>
+    </div>
+</div>
+<script>
+	$(document).ready(function(){
+		load_height_full();
+		function load_height_full(){
+			var h_body = $(window).height();
+			var h_header = $('#header').outerHeight();
+			var h_footer = $('#footer').outerHeight();
+			$('.sec-container').css('min-height', (h_body - (h_header + h_footer)) );
+			var h = $('.detail-new').height();
+			var h_c = $('.sec-container').height();
+			if ((h + 40) < h_c) {
+				$('.img-link-download').css('margin-top', (h_c - 40 - h));
+			}
+		}
+	})
+</script>
+{% framework %}
+

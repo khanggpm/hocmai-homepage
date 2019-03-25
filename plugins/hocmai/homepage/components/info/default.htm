@@ -1,0 +1,95 @@
+ {% set khoi_xoay = __SELF__.khoi_xoay %}
+ {% set giao_duc = __SELF__.giao_duc %}
+
+<div class="section section-1" id="section1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-4">
+                <div class="banner-group">
+                    <div class="swiper-container banner-bg">
+                        <div class="swiper-wrapper">
+                        	{% for kx in khoi_xoay %}
+                               <div class="swiper-slide" style="background-image:url({{ kx.image|media }})"></div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="slider-sub swiper-container">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-wrapper">
+                        	{% for kx in khoi_xoay %}
+                            <div class="swiper-slide group-banner-sub">
+                                <div class="banner-sub" style="background-image: url({{ 'assets/images/backgroundh.png'|theme}});">
+                                    <div class="banner-sub-content wow" data-wow-type="fadeInUp">
+                                        <div class="content-sub">
+                                            <p class="title-top">{{ kx.title }}</p>
+                                                <div class="group-title-border">
+                                                    <h3 class="title-big">{{ kx.title_sub }}</h3>
+                                                    <div class="bd-title-sub"></div>
+                                                </div>
+	                                        <p class="desc"> {{ html_limit(kx.content | raw, 100) }}</p>
+                                        </div>
+                                        <div class="btn-banner-sub"><a class="btn-seemore" href="#">Tìm hiểu
+                                             thêm <span class="icon">
+                                             <i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>            
+                                    
+                           
+<div class="section section-2" id="section2">
+   <div class="container">
+       <div class="row">
+            <div class="col-md-4">
+               <div class="section2-left">
+
+               </div>
+            </div>
+            <div class="col-md-8">
+                <div class="section2-right">
+                    <h3 class="title-section">
+                        <span class="cube"></span><span class="title">CHƯƠNG TRÌNH GIÁO DỤC</span>
+                    </h3>
+                 	<div class="swiper-pagination"></div>
+                    <div class="swiper-container group-slider-program">
+                        <div class="swiper-wrapper group-programe wow">
+                        	{% for gd in giao_duc %}
+                            <div class="swiper-slide item-slide-programe" style=" background-image: url({{ gd.image1|media }});">
+                                <div class="wow" data-wow-type="fadeInRight">
+                                    <div class="title">
+                                         <a href="#">{{ gd.title }}</a>
+                                    </div>
+                                    
+                                    <p class="desc">{{ html_limit(gd.content | raw, 120) }}</p>
+                                    
+                                    <div class="list-item-programe">
+                                    	<h3 class="name">Các sản phẩm nổi bật:</h3>
+                                    	<ul class="list-item-pro wow" data-wow-type="fadeInRight">
+                                    		<li>
+                                    			<div class="item-programe">
+                                    				<a href="{{ gd.url }}">
+                                    					<img src="{{ gd.image2|media }}">
+                                    				</a>
+                                    			</div>
+                                    		</li>
+                                    	</ul>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+    </div>                                
+</div>

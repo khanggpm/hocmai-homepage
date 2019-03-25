@@ -1,0 +1,10 @@
+name: SliderJob
+form: $/hocmai/recruitment/models/slider/fields.yaml
+modelClass: Hocmai\Recruitment\Models\Slider
+defaultRedirect: hocmai/recruitment/sliderjob
+create:
+    redirect: 'hocmai/recruitment/sliderjob/update/:id'
+    redirectClose: hocmai/recruitment/sliderjob
+update:
+    redirect: hocmai/recruitment/sliderjob
+    redirectClose: hocmai/recruitment/sliderjob

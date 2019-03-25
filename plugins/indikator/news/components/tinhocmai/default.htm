@@ -1,0 +1,166 @@
+{% set posts = __SELF__.posts %}
+{% set firstPosts = __SELF__.firstPosts %}
+{% set twoPosts = __SELF__.twoPosts %}
+{% set postsNomal = __SELF__.postsNomal %}
+{% set postsUpcoming = __SELF__.postsUpcoming %}
+{% set postReadMosts = __SELF__.postReadMosts %}
+ <!-- s -->
+<main id="main-child">
+    <div class="sec-new-detail sec-container">
+        <div class="container">
+            <div class="btn-group-select">
+                <div class="btn-select active left">
+                    <div class="menu-child-cube">
+                        <div class="cube-par">
+                            <a href="/tin-hoc-mai"><span class="cube-icon"></span>TIN HOCMAI</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-select right">
+                    <div class="menu-child-cube">
+                        <a href="/tin-bao-chi"><span class="cube-icon"></span>TIN BÁO CHÍ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="groupnew">
+                    <div class="col-md-8">
+                        <div class="news-magazine">
+                            <div class="news-magazine-top">
+                                <!-- Tin dau trang -->
+                                <div class="nmt-big">
+                                    {% for firstPost in firstPosts %}
+                                    <div class="nmt-background" style="background-image: url({{firstPost.image|media}});">
+                                        <div class="link-click">
+                                            <a href="/tin-hoc-mai/{{ firstPost.slug }}"></a>
+                                        </div>
+                                        <div class="gradient-new"></div>
+                                        <div class="desc">
+                                            <a href="/tin-hoc-mai/{{ firstPost.slug }}">
+                                                {{ firstPost.title }}
+                                            </a>
+                                        </div>
+                                        <div class="border-title-big"></div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                
+                                <!-- 2 tin con -->
+                                <div class="nmt-small clear">
+                                    {% for twoPost in twoPosts %}
+                                    <div class="item-nmt-small">
+                                        <div class="nmt-background"
+                                             style="background-image: url({{ twoPost.image|media }});">
+                                            <div class="link-click">
+                                                <a href="/tin-hoc-mai/{{ twoPost.slug }}"></a>
+                                            </div>
+                                            <div class="gradient-new"></div>
+                                            <div class="desc">
+                                                <a href="/tin-hoc-mai/{{ twoPost.slug }}">
+                                                    {{ twoPost.title }}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <!-- Tin con lai -->
+                            <div class="news-magazine-bottom">
+                                <ul class="list-group-magazine clear">
+                                    {% for postNomal in postsNomal %}
+                                    <li>
+                                        <div class="item-magazine">
+                                            <div class="img">
+                                                <div class="img-new-item"
+                                                     style="background-image: url({{postNomal.image|media}});">
+                                                    <div class="link-click">
+                                                        <a href="/tin-hoc-mai/{{ postNomal.slug }}"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <h3 class="title">
+                                                    <a href="/tin-hoc-mai/{{ postNomal.slug }}">
+                                                        {{ postNomal.title }}
+                                                    </a>
+                                                </h3>
+                                                <div class="article-name">
+                                                    {% if postNomal.tags %}
+                                                        {% for tag in postNomal.tags %}
+                                                            <a href="#">{{ tag }}</a>
+                                                        {% endfor %}
+                                                    {% endif %}
+                                                    <p class="date-time">
+                                                        {{ postNomal.published_at|date('d-m-Y') }}
+                                                    </p>
+                                                </div>
+                                                <div class="desc">
+                                                    <p>{{ postNomal.introductory|raw }}</p>
+                                                </div>
+                                                <div class="btn-seemore">
+                                                    <a href="/tin-hoc-mai/{{ postNomal.slug }}">Xem Thêm</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {{ posts.render|raw }}
+                    <div class="col-md-4 fix-sticky">
+                        <div class="detail-new-right clear">
+                            <div class="read-more-new">
+                                <div class="title-group-new">
+                                    <a href="#">ĐỌC NHIỀU NHẤT</a>
+                                </div>
+                                <ul class="list-read-more clear" >
+                                    {% for postReadMost in postReadMosts %}
+                                        <li>
+                                            <div class="item-read-more">
+                                                <a href="/tin-hoc-mai/{{ postReadMost.slug }}">{{ postReadMost.title }}
+                                                </a>
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <div class="even-future">
+                                <div class="title-group-new">
+                                    <a href="#">SỰ KIỆN SẮP DIỄN RA</a>
+                                </div>
+                                <div class="has-gradient-group">
+                                    <!--<div class="gradient-bot"></div>-->
+                                    <ul class="list-even-future clear">
+                                        {% for postsUp in postsUpcoming %}
+                                        <li>
+                                            <a class="haslink" href="/tin-hoc-mai/{{ postsUp.slug }}">
+                                                <span class="date-time">
+                                                    {{ postsUp.published_at|date('d-m-Y') }}
+                                                </span>
+                                                <span class="title">
+                                                    {{ postsUp.title }}
+                                                </span>
+                                            </a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="fanpage-new">
+                                <div class="title-group-new">
+                                    <a href="#">CẬP NHẬT TIN MỚI NHẤT</a>
+                                </div>
+                                <div class="fb-page" data-href="https://www.facebook.com/Duc.BT.hcm/" data-tabs="timeline" data-width="100%" data-height="150" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Duc.BT.hcm/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Duc.BT.hcm/">Máy Bơm Nước MINI</a></blockquote></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{{ posts.render|raw }}

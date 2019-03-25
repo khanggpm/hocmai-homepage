@@ -1,0 +1,43 @@
+fields:
+    logo:
+        label: Logo
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        span: auto
+        type: mediafinder
+    address:
+        label: 'Địa chỉ'
+        span: auto
+        type: text
+    home_phone:
+        label: 'Số điện thoại bàn'
+        span: auto
+        type: text
+    mobile_phone:
+        label: 'Số di động'
+        span: auto
+        type: text
+    mail:
+        label: Mail
+        span: auto
+        type: text
+    fb_link:
+        label: 'Link Facebook'
+        span: auto
+        type: text
+    zalo_link:
+        label: 'Link Zalo'
+        span: auto
+        type: text
+    youtube_link:
+        label: 'Link Youtube'
+        span: auto
+        type: text
+    header_banner_news:
+        label: 'Banner trang con'
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        span: auto
+        type: mediafinder

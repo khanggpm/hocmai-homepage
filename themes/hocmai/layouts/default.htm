@@ -1,0 +1,93 @@
+description = "Layout for all page"
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="keywords" content="{{ this.page.meta_keywords }}">
+    <meta property="og:title" content="{{ this.page.title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <title>{{this.page.title}}</title>
+
+    <link rel="stylesheet" type="text/css" href="{{'assets/js/bootstrap/css/bootstrap.min.css'|theme}}">
+    <link rel="stylesheet" type="text/css" href="{{'assets/js/slick/slick.css'|theme}}">
+    <link rel="stylesheet" type="text/css" href="{{'assets/js/swiper/swiper.min.css'|theme}}">
+    <link rel="stylesheet" type="text/css" href="{{'assets/js/fullpage/fullpage.css'|theme}}">
+    <link rel="stylesheet" href="{{'assets/css/style.css'|theme}}" media="all">
+    <link rel="stylesheet" href="{{'assets/css/responsive.css'|theme}}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{'assets/css/animate.css'|theme}}" media="all">
+    <script src="{{'assets/js/jquery-1.9.1.min.js'|theme}}"></script>
+    <script src="{{'assets/js/bootstrap/js/bootstrap.min.js'|theme}}"></script>
+    {% styles %}
+</head>
+<body class="page page-child">
+    <header id="header">
+        {% partial 'site/header' %}
+        {% if this.page.baseFileName != 'tin-tuc' and this.page.baseFileName != 'don-vi-lien-ket' and this.page.baseFileName != 'don-vi-thanh-vien' and this.page.baseFileName != 'tam-nhin-su-menh' and this.page.baseFileName != 'hanh-trinh-12-nam' and this.page.baseFileName != 'thanh-tuu-dat-duoc' and this.page.baseFileName != 'cau-chuyen-thuong-hieu' %}
+            <div class="title-page">
+                <div class="container">
+                    <div class="name-page-cube">
+                        <h1 class="name-page">
+                            <span class="cebu-before"></span>{{ this.page.title }}
+                            <!-- TIN TỨC -->
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if this.page.baseFileName == 'tin-tuc'  %}
+        <div class="title-page fix-fix">
+            <div class="container">
+                <div class="name-page-cube">
+                    <h1 class="name-page">
+                        {{ this.page.title }}
+                    </h1>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if this.page.baseFileName == 'don-vi-lien-ket' or this.page.baseFileName == 'don-vi-thanh-vien' or this.page.baseFileName == 'tam-nhin-su-menh' or this.page.baseFileName == 'hanh-trinh-12-nam' or this.page.baseFileName == 'thanh-tuu-dat-duoc' or this.page.baseFileName == 'cau-chuyen-thuong-hieu' %}
+        <div class="title-page">
+            <div class="container">
+                <div class="name-page-cube sec-tt">
+                    <div class="title-small"><span class="cube-icon"></span> {{ this.page.title_small }}</div>
+                    <h1 class="name-page pc"><span>{{ this.page.title_big }}</span></h1>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        
+    </header>
+    <main id="main-child">
+        {% page %}
+    </main>
+
+    <footer id="footer">
+        {% partial 'site/footer-1' %}
+
+    </footer>
+
+
+    <a href="javascript:;" class="scroll-top-link" id="scroll-top"><span class="name-defaule">UP</span><span
+            class="up-hover"><i class="fa fa-arrow-up" aria-hidden="true"></i></span></a>
+    <script src="{{ 'assets/js/master.js'|theme }}"></script>
+    <script type="text/javascript" src="{{ 'assets/js/wow.min.js'|theme }}"></script>
+    <script type="text/javascript" src="{{ 'assets/js/swiper/swiper.min.js'|theme }}"></script>
+    <script type="text/javascript" src="{{ 'assets/js/fullpage/fullpage.js'|theme }}"></script>
+    <script type="text/javascript" src="{{ 'assets/js/slick/slick.min.js'|theme }}"></script>
+   
+    {% scripts %}
+
+</body>
+</html>

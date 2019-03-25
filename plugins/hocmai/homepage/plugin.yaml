@@ -1,0 +1,34 @@
+plugin:
+    name: 'hocmai.homepage::lang.plugin.name'
+    description: 'hocmai.homepage::lang.plugin.description'
+    author: 'Pham Khang'
+    icon: oc-icon-home
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Trang chủ'
+        url: hocmai/homepage/info
+        icon: icon-home
+        permissions:
+            - homepage.full
+        sideMenu:
+            side-menu-item2:
+                label: 'Thông tin'
+                url: hocmai/homepage/info
+                icon: icon-home
+            side-menu-item3:
+                label: 'Đối tác'
+                url: hocmai/homepage/partner
+                icon: icon-sitemap
+            side-menu-item4:
+                label: Settings
+                url: hocmai/homepage/settings
+                icon: icon-university
+            side-menu-item:
+                label: 'Sự kiện'
+                url: hocmai/homepage/events
+                icon: icon-connectdevelop
+permissions:
+    homepage.full:
+        tab: 'Home Page'
+        label: 'Full role home page'

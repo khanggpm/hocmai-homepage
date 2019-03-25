@@ -1,0 +1,11 @@
+[detailnews]
+==
+<h3 class="title">{{ detail_news.title }} </h3>
+<p class="date-time"><span class="hour"> {{ detail_news.published_at|date('h:i') }}</span><span class="date"> {{ detail_news.published_at|date('d-m-Y') }}</span></p>
+
+<div class="desc">
+    <p>{{ detail_news.introductory | raw  }}</p>
+</div>
+<div class="content">
+    {{ detail_news.content | raw }}
+</div>

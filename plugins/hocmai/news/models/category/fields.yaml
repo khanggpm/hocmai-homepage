@@ -1,0 +1,13 @@
+fields:
+    name:
+        label: 'Tên loại tin'
+        span: auto
+        placeholder: 'Nhập loại tin'
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text

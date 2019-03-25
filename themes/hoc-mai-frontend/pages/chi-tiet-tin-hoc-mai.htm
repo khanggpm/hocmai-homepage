@@ -1,0 +1,72 @@
+title = "Chi tiết tin học mãi"
+url = "/tin-hoc-mai/:slug"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[newsChiTietHocMai]
+slug = "{{ :slug }}"
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <title></title>
+
+
+    <link rel="stylesheet" type="text/css" href="{{'assets/js/bootstrap/css/bootstrap.min.css'|theme}}">
+    <link rel="stylesheet" type="text/css" href="{{'assets/js/swiper/swiper.min.css'|theme}}">
+    <link rel="stylesheet" type="text/css" href="{{'assets/js/fullpage/fullpage.css'|theme}}">
+    <link rel="stylesheet" href="{{'assets/css/style.css'|theme}}" media="all">
+    <link rel="stylesheet" href="{{'assets/css/responsive.css'|theme}}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{'assets/css/animate.css'|theme}}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{'assets/js/slick/slick.css'|theme}}">
+
+    <script src="{{'assets/js/jquery-1.9.1.min.js'|theme}}"></script>
+    <script src="{{'assets/js/bootstrap/js/bootstrap.min.js'|theme}}"></script>
+</head>
+<body class="page page-child">
+{% partial 'news/header' %}
+{% component 'newsChiTietHocMai' %}
+{% partial 'news/footer' %}
+
+
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1916689885307106&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<a href="javascript:;" class="scroll-top-link" id="scroll-top"><span class="name-defaule">UP</span><span class="up-hover"><i class="fa fa-arrow-up" aria-hidden="true"></i></span></a>
+
+<script src="{{'assets/js/master.js'|theme}}"></script>
+<script type="text/javascript" src="{{'assets/js/wow.min.js'|theme}}"></script>
+<script type="text/javascript" src="{{'assets/js/slick/slick.min.js'|theme}}"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        if($( window ).width() > 991) {
+            SliderVerticle(".list-even-future");
+            SliderVerticle(".list-read-more");
+        }
+    });
+</script>
+
+</body>
+</html>

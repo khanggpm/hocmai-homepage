@@ -1,0 +1,59 @@
+==
+function onStart()
+{
+}
+
+==
+<div class="container">
+    <div class="">
+        <div class="group-job-bot">
+            {% for job in more_job %}
+            <div class="item-job-bot">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="name-partner children-job">
+                            {% if( job.status == 1)  %}
+                                <a class="label-select hot" >
+                                    <span class="cebu-before"></span>{{ job.room_name }}
+                                    <span class="label-status label-hot">HOT</span>
+                                </a>
+                            {% endif %}
+
+                            {% if (job.status == 2) %}
+                                <a class="label-select new" >
+                                    <span class="cebu-before"></span>{{ job.room_name }}
+                                    <span class="label-status label-new">NEW</span>
+                                </a>
+                            {% endif %}
+                            {% if (job.status == 0) %}
+                            <a class="label-select hot">
+                                <span class="cebu-before"></span>
+                                {{ job.room_name }} 
+                            </a>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="name-job children-job">
+                            <!-- <a href="{{ 'tuyen-dung-chi-tiet' | page({id : job.id}) }}">  -->
+                            <a href="#" class="detail_job" job-id="{{ job.id }}"> 
+                                <span class="cebu-before"></span>{{ job.job_name }}
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="date-job children-job">
+                            <a href="#"> <span class="cebu-before"></span><span class="show-mobile">Hạn nộp hồ sơ: </span>{{ job.deadline | date('d-m-Y')  }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="btn-close">
+            <a href="#" class="more_job">XEM THÊM</a></div>
+    </div>
+</div>

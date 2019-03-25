@@ -1,0 +1,93 @@
+url = "/tuyen-dung/chi-tiet/:id|^[0-9]+$"
+title = 'Tuyen Dung'
+layout = 'default'
+[jobs]
+
+[ranks]
+
+[listsjob]
+==
+function onStart()
+{
+	$this->addJs('assets/js/tuyen-dung.js');
+}
+
+function onTest()
+{
+    //$this->page['result'] = 'hello world';
+    $result = [
+        [
+            'id' => 1,
+            'department_name' => 'Phong Thuong Hieu',
+            'job_name' => 'NV truyen thong',
+            'due_date' => '15-07-2019'
+        ],
+        [
+            'id' => 1,
+            'department_name' => 'Ke toan',
+            'job_name' => 'Pho phong KT',
+            'due_date' => '09-08-2019'
+        ]
+    ];
+    $this->page['result'] = $result;
+}
+==
+<div class="group-job sec-container">
+    {% partial 'tuyen-dung/job-group' %}
+</div>
+<div class="group-search sec-container sec-40">
+    {% partial 'tuyen-dung/search-job' %}
+</div>
+<div class="detail-job sec-container">
+    {% partial 'tuyen-dung/detail-job' %}
+</div>
+<div class="sec-job-bot sec-container">
+    {% partial 'tuyen-dung/more-job' %}
+    <!-- {% partial 'tuyen-dung/header-job' %} -->
+</div>
+
+
+<script>
+	jQuery(document).ready(function () {
+		$('.list-job').slick({
+			infinite: true,
+			speed: 300,
+			slidesToShow: 4,
+			autoplay: true,
+			autoplaySpeed: 2000,
+			slidesToScroll: 1,
+			prevArrow: '<button class="slick-prev-banner" aria-label="Previous" type="button"><span></span><img src="{{"assets/images/btn-left.png"|theme}}"></button>',
+			nextArrow: '<button class="slick-next-banner" aria-label="Next" type="button"><span></span><img src="{{"assets/images/btn-right.png"|theme}}"></button>',
+			responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					infinite: true,
+					dots: true,
+					arrows: false
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+					dots: true,
+					arrows: false
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					dots: true,
+					arrows: false
+				}
+			}
+			]
+		});
+	});
+</script>

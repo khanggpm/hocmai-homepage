@@ -1,0 +1,67 @@
+<!-- <form data-request="listsjob::onListsJob" name="search-job" data-request-update="'tuyen-dung/list-job' : '#listjob'">
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="select-major">
+                <select class="f-control select-form" name="job_id">
+                    <option value="#option">Nghề nghiệp tuyển dụng</option>
+                    {% for job in jobs.jobs %}
+                    <option value="{{ job.id }}">{{ job.name }}</option>
+                    {% endfor %}
+                </select>
+                <div class="icon-dow"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="select-major">
+                <select class="f-control select-form" name="rank_id">
+                    <option value="#option">Cấp bậc tuyển dụng</option>
+                    {% for r in ranks.ranks %}
+                    <option value="{{ r.id }}">{{ r.name }}</option>
+                    {% endfor %}
+                </select>
+                <div class="icon-dow"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="btn-submit-search">
+                <a href="javascript:$('form').submit()">Tìm kiếm</a>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+
+-->
+
+<div class="container">
+   <div class="row">
+        <div class="col-md-5">
+            <div class="select-major">
+                <select class="f-control select-form" name="job_id" id="frm_ser_job_id">
+                    <option value="0">Nghề nghiệp tuyển dụng</option>
+                    {% for job in jobs.jobs %}
+                        <option value="{{ job.id }}">{{ job.name }}</option>
+                    {% endfor %}
+                </select>
+                <div class="icon-dow"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="select-major">
+                <select class="f-control select-form" name="rank_id" id="frm_ser_rank_id">
+                    <option value="0">Cấp bậc tuyển dụng</option>
+                    {% for r in ranks.ranks %}
+                        <option value="{{ r.id }}">{{ r.name }}</option>
+                    {% endfor %}
+                </select>
+                <div class="icon-dow"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="btn-submit-search">
+                <a href="javascript:$('form').submit()" class="filter_job">Tìm kiếm</a>
+            </div>
+        </div>
+    </div>
+</div>

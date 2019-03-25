@@ -1,0 +1,49 @@
+[bignews]
+==
+{% for first_new in first_big_new %}
+<div class="nmt-big">
+    <div class="nmt-background" style="background-image: url({{ first_new.image |media }});">
+        <div class="link-click">
+            <a href="{{ 'chi-tiet' | page({cat_id : this.param.cat_id,slug :bignews.big_news[0].slug}) }}"></a>
+        </div>
+        <div class="gradient-new"></div>
+        <div class="desc">
+            <a href="{{ 'chi-tiet' | page({cat_id : this.param.cat_id,slug :bignews.big_news[0].slug}) }}">{{ bignews.big_news[0].title }}</a>
+
+        </div>
+        <div class="border-title-big"></div>
+    </div>
+</div>
+
+{% endfor %}
+
+<div class="nmt-small clear">
+    <div class="item-nmt-small">
+        <div class="nmt-background"
+             style="background-image: url({{ bignews.big_news[1].image | media}});">
+            <div class="link-click">
+                <a href="{{ 'chi-tiet' | page({cat_id : this.param.cat_id,slug : bignews.big_news[1].slug}) }}"></a>
+            </div>
+            <div class="gradient-new"></div>
+            <div class="desc">
+                <a href="{{ 'chi-tiet' | page({cat_id : this.param.cat_id,slug : bignews.big_news[1].slug}) }}">
+                    {{bignews.big_news[1].title }}
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="item-nmt-small">
+        <div class="nmt-background"
+             style="background-image: url({{ bignews.big_news[2].image | media}});">
+
+            <div class="link-click">
+                <a href="{{ 'chi-tiet' | page({cat_id : this.param.cat_id,slug :bignews.big_news[2].slug}) }}"></a>
+            </div>
+            <div class="gradient-new"></div>
+            <div class="desc">
+                <a href="{{ 'chi-tiet' | page({cat_id : this.param.cat_id,slug :bignews.big_news[2].slug}) }}">{{bignews.big_news[2].title}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+

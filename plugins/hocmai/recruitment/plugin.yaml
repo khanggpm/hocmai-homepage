@@ -1,0 +1,38 @@
+plugin:
+    name: 'hocmai.recruitment::lang.plugin.name'
+    description: 'hocmai.recruitment::lang.plugin.description'
+    author: 'Pham Khang'
+    icon: oc-icon-phone
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Tuyển dụng'
+        url: hocmai/recruitment/room
+        icon: icon-archive
+        permissions:
+            - recruitment.full
+        sideMenu:
+            side-menu-item:
+                label: 'Phòng ban'
+                url: hocmai/recruitment/room
+                icon: icon-th
+            side-menu-item2:
+                label: 'Cấp bậc'
+                url: hocmai/recruitment/ranks
+                icon: icon-sitemap
+            side-menu-item3:
+                label: 'Nghề nghiệp'
+                url: hocmai/recruitment/jobs
+                icon: icon-sitemap
+            side-menu-item4:
+                label: 'Chi tiết công việc'
+                url: hocmai/recruitment/details
+                icon: icon-server
+            side-menu-item5:
+                label: 'Slider nghề nghiệp'
+                url: hocmai/recruitment/sliderjob
+                icon: icon-sliders
+permissions:
+    recruitment.full:
+        tab: Recruitment
+        label: 'Full Role Recruitment'

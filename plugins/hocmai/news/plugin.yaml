@@ -1,0 +1,6 @@
+plugin:
+    name: 'hocmai.news::lang.plugin.name'
+    description: 'hocmai.news::lang.plugin.description'
+    author: 'Pham Khang'
+    icon: oc-icon-newspaper-o
+    homepage: ''

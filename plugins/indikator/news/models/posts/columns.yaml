@@ -1,0 +1,73 @@
+columns:
+    id:
+        label: 'indikator.news::lang.form.id'
+        type: number
+        invisible: true
+    image:
+        label: 'Ảnh đại diện'
+        type: partial
+        searchable: true
+        path: ~/plugins/indikator/news/models/posts/_image.htm
+    title:
+        label: 'Tiêu đề'
+        type: text
+        searchable: true
+    slug:
+        label: 'indikator.news::lang.form.slug'
+        type: text
+        searchable: true
+        invisible: true
+    category_id:
+        label: 'indikator.news::lang.menu.categories'
+        type: partial
+        searchable: false
+        invisible: false
+        sortable: true
+        path: ~/plugins/indikator/news/models/posts/_category.htm
+    tags:
+        label: 'indikator.news::lang.form.tags'
+        sortable: false
+        invisible: true
+        type: partial
+        path: ~/plugins/indikator/news/models/posts/_tags.htm
+    status:
+        label: Trạng thái 
+        sortable: false
+        type: partial
+        path: ~/plugins/indikator/news/models/posts/_status.htm
+    author:
+        label: 'indikator.news::lang.form.author'
+        sortable: false
+        invisible: true
+        type: partial
+        path: ~/plugins/indikator/news/models/posts/_author.htm
+    statistics:
+        label: 'indikator.news::lang.stat.viewed'
+        type: text
+        invisible: true
+        sortable: false
+    length:
+        label: 'indikator.news::lang.form.length'
+        type: partial
+        invisible: true
+        path: ~/plugins/indikator/news/models/posts/_length.htm
+    last_send_at:
+        label: 'indikator.news::lang.form.last_send'
+        type: timesince
+        searchable: false
+        invisible: true
+    published_at:
+        # label: 'indikator.news::lang.form.published_at'
+        label: Ngày xuất bản
+        searchable: true
+        type: datetime
+    created_at:
+        label: 'indikator.news::lang.form.created_at'
+        searchable: true
+        invisible: true
+        type: datetime
+    updated_at:
+        label: 'indikator.news::lang.form.updated_at'
+        searchable: true
+        invisible: true
+        type: datetime

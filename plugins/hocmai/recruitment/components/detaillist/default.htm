@@ -1,0 +1,86 @@
+ {% set listRecuitments = __SELF__.listRecuitments %}
+ <div class="detail-job sec-container list">
+ 	<div class="info-top">
+ 		<div class="row">
+ 			<div class="col-md-4">
+ 				<div class="item-info-top notpad">
+ 					<div class="name">
+ 						<p>PHÒNG BAN</p>
+ 					</div>
+ 				</div>
+
+ 			</div>
+ 			<div class="col-md-4">
+ 				<div class="item-info-top two notpad">
+ 					<div class="name">
+ 						<p>VỊ TRÍ</p>
+ 					</div>
+ 				</div>
+
+ 			</div>
+ 			<div class="col-md-4">
+ 				<div class="right-info-top">
+ 					<div class="item-info-top right">
+ 						<div class="name">
+ 							<p>HẠN NỘP HỒ SƠ</p>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ </div>
+ <div class="sec-job-bot sec-container topun">
+ 	<div class="container">
+ 		<div class="">
+ 			<div class="group-job-bot">
+
+ 				<div class="item-job-bot">
+ 					{% for list in listRecuitments %}
+ 					<div class="row">
+ 						<div class="col-md-4">
+ 							<div class="name-partner children-job">
+ 								<a class="label-select new" href="#"> 
+ 									<span class="cebu-before"></span>{{ list.room_name }} 
+
+ 									{% if list.status == 1 %}
+ 										<span class="label-status label-hot">HOT</span>
+ 									{% elseif list.status == 2 %}
+ 										<span class="label-status label-new">NEW</span>
+ 									{% else %}
+ 										
+ 									{% endif %}
+ 									
+ 								</a>
+ 							</div>
+ 						</div>
+ 						<div class="col-md-4">
+ 							<div class="name-job children-job">
+ 								<a href="#"> 
+ 									<span class="cebu-before"></span>{{ list.job_position }} 
+ 								</a>
+ 							</div>
+ 						</div>
+ 						<div class="col-md-4">
+ 							<div class="date-job children-job">
+ 								<a href="#"> 
+ 									<span class="cebu-before"></span>
+ 									<span class="show-mobile">
+ 										Hạn nộp hồ sơ: 
+ 									</span>
+ 									{{ list.deadline|date('d-m-Y') }}
+ 								</a>
+ 							</div>
+ 						</div>
+ 					</div>
+ 					{% endfor %}
+ 				</div>
+
+ 			</div>
+ 			<div class="btn-close">
+ 				<a href="#">XEM THÊM</a></div>
+ 			</div>
+ 		</div>
+ 	</div>
+
+ 	

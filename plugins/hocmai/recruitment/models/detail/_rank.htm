@@ -1,0 +1,5 @@
+<?php
+
+if ($record->ranks_id > 0) {
+    echo \hocmai\Recruitment\Models\Ranks::whereId($record->ranks_id)->value('name');
+}

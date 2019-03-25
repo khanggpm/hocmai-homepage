@@ -1,0 +1,10 @@
+name: Jobs
+form: $/hocmai/recruitment/models/jobs/fields.yaml
+modelClass: hocmai\Recruitment\Models\Jobs
+defaultRedirect: hocmai/recruitment/jobs
+create:
+    redirect: 'hocmai/recruitment/jobs/update/:id'
+    redirectClose: hocmai/recruitment/jobs
+update:
+    redirect: hocmai/recruitment/jobs
+    redirectClose: hocmai/recruitment/jobs

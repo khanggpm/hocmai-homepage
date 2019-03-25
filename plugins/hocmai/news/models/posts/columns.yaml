@@ -1,0 +1,7 @@
+columns:
+    title:
+        label: 'Tieu de'
+        type: text
+    category_id:
+        label: 'Danh muc'
+        type: text

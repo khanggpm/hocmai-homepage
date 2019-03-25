@@ -1,0 +1,16 @@
+fields:
+    url:
+        label: URL
+        span: auto
+        type: text
+    image:
+        label: 'Ảnh hiển thị'
+        mode: image
+        imageWidth: '150'
+        imageHeight: '150'
+        span: auto
+        type: mediafinder
+    name:
+        label: 'Tên đối tác'
+        span: auto
+        type: text

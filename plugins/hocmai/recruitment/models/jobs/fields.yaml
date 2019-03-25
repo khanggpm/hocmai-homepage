@@ -1,0 +1,9 @@
+fields:
+    name:
+        label: 'Nghề nghiệp'
+        span: auto
+        type: text
+    rank_job:
+        label: 'Cấp bậc'
+        span: auto
+        type: text

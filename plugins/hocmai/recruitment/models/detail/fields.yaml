@@ -1,0 +1,92 @@
+fields:
+    job_position:
+        label: 'Địa điểm làm việc'
+        span: auto
+        type: text
+    wage:
+        label: 'Mức lương'
+        span: auto
+        type: text
+    work_experience:
+        label: 'Kinh nghiệm'
+        span: auto
+        type: text
+    slots:
+        label: 'Số lượng'
+        span: auto
+        type: text
+    work_address:
+        label: 'Nơi làm việc'
+        span: auto
+        type: text
+    deadline:
+        label: 'Hạn nộp hồ sơ'
+        mode: datetime
+        span: auto
+        type: datepicker
+    deadline_type:
+        label: 'Hạn thức nộp hồ sơ'
+        span: auto
+        type: text
+    contact:
+        label: 'Người liên hệ'
+        span: auto
+        type: text
+    email:
+        label: Email
+        span: auto
+        type: text
+    phone:
+        label: 'Điện thoại'
+        span: auto
+        type: text
+    room:
+        label: 'Phòng ban'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+    ranks:
+        label: 'Cấp bậc'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+    jobs:
+        label: 'Nghề nghiệp'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+    working_time:
+        label: 'Hình thức làm việc'
+        span: auto
+        type: text
+    status:
+        label: 'Trạng thái công việc'
+        options:
+            - Default
+            - Hot
+            - New
+        span: auto
+        type: radio
+tabs:
+    fields:
+        job_desc:
+            label: 'Mô tả công việc'
+            size: ''
+            span: auto
+            type: richeditor
+            tab: 'Tab 1'
+        job_requirements:
+            label: 'Yêu cầu công việc'
+            size: ''
+            span: auto
+            type: richeditor
+            tab: 'Tab 1'
+        entitlements:
+            label: 'Quyền lợi được hưởng'
+            size: ''
+            span: auto
+            type: richeditor
+            tab: 'Tab 1'

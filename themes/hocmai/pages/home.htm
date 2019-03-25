@@ -1,0 +1,257 @@
+url = "/"
+layout = 'home'
+[info]
+[partner]
+==
+function onStart()
+{
+    $this->addJs('assets/js/home.js');
+}
+
+==
+<div class="section section-1" id="section1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-4">
+                <div class="banner-group">
+                    <div class="swiper-container banner-bg">
+                        <div class="swiper-wrapper">
+                            {% for kx in info.khoi_xoay %}
+                            <div class="swiper-slide" style="background-image:url({{ kx.image | media }})"></div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="slider-sub swiper-container">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-wrapper">
+                            {% for kx in info.khoi_xoay %}
+                            <div class="swiper-slide group-banner-sub">
+                                <div class="banner-sub" style="background-image: url({{'assets/images/backgroundh.png'|theme}});">
+                                    <div class="banner-sub-content wow" data-wow-type="fadeInUp">
+                                        <div class="content-sub">
+                                            <p class="title-top">{{ kx.title }}</p>
+                                            <div class="group-title-border">
+                                                <h3 class="title-big">{{ kx.title_sub }}</h3>
+                                                <div class="bd-title-sub"></div>
+                                            </div>
+                                            <p class="desc">{{ kx.content }}</p>
+                                        </div>
+                                        <div class="btn-banner-sub"><a class="btn-seemore" href="{{ kx.url_khoi_xoay }}">Tìm hiểu
+                                            thêm <span class="icon"><i
+                                                    class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section section-2" id="section2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="section2-left">
+
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="section2-right">
+                    <h3 class="title-section">
+                        <span class="cube"></span><span class="title">CHƯƠNG TRÌNH GIÁO DỤC</span>
+                    </h3>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-container group-slider-program">
+                        <div class="swiper-wrapper group-programe wow">
+                            {% for key,gd in info.giao_duc %}
+                            
+                            <div class="swiper-slide item-slide-programe"
+                                 style=" background-image: url({{gd.image | media}});">
+                                <div class="wow" data-wow-type="fadeInRight">
+
+                                        {% if key == 1 %}
+                                             <div class="title ic_speak">
+                                        {% else %}
+                                             <div class="title">
+                                        {% endif %}
+                                        <a target="_blank" href="{{ gd.url_khoi_xoay }}">{{ gd.title }}</a>
+                                    </div>
+                                    <p class="desc"> {{ gd.content }} </p>
+                                    <div class="list-item-programe">
+                                        <h3 class="name">{{ gd.title_product }}:</h3>
+                                        <ul class="list-item-pro wow" data-wow-type="fadeInRight">
+                                            {% if gd.image1 !='' %}
+                                            <li>
+                                                <div class="item-programe">
+                                                    <a href="{{ gd.url1 }}">
+                                                        <img  src="{{ gd.image1 | media }}">
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            {%endif%}
+
+                                            {% if gd.image2 != '' %}
+                                            <li>
+                                                <div class="item-programe">
+                                                    <a href="{{ gd.url2 }}">
+                                                        <img  src="{{ gd.image2 | media }}">
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            {%endif%}
+
+                                            {% if gd.image3 != '' %}
+                                            <li>
+                                                <div class="item-programe">
+                                                    <a href="{{ gd.url3 }}">
+                                                        <img  src="{{ gd.image3 | media }}">
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            {%endif%}
+
+                                            {% if gd.image4 != '' %}
+                                            <li>
+                                                <div class="item-programe">
+                                                    <a href="{{ gd.url4 }}">
+                                                        <img src="{{ gd.image4 | media }}">
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            {%endif%}
+
+
+                                          
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section section-3" id="section3">
+    <div class="background-brand">
+    </div>
+    <div class="container">
+        <h3 class="sec-title">ĐỐI TÁC</h3>
+        <div class="group-partner">
+            <ul class="list-partner">
+                {% if(pars[0].image != '') %}
+                <li class="wow" data-wow-type="fadeInUp">
+                    <div class="item-partner">
+                        <a href="{{ pars[0].url }}"><img src="{{ pars[0].image |media }}"></a>
+                    </div>
+                </li>
+                {% endif%}
+
+                {% if(pars[1].image != '') %}
+                <li class="wow" data-wow-type="fadeInUp">
+                    <div class="item-partner">
+                        <a href="{{ pars[1].url }}"><img src="{{ pars[1].image |media }}"></a>
+                    </div>
+                </li>
+                {% endif%}
+
+                {% if(pars[2].image != '') %}
+                <li class="wow" data-wow-type="fadeInUp">
+                    <div class="item-partner">
+                        <a href="{{ pars[2].url }}"><img src="{{ pars[2].image |media }}"></a>
+                    </div>
+                </li>
+                {% endif%}
+
+                {% if(pars[3].image != '') %}
+                <li class="wow" data-wow-type="fadeInUp">
+                    <div class="item-partner">
+                        <a href="{{ pars[3].url }}"><img src="{{ pars[3].image |media }}"></a>
+                    </div>
+                </li>
+                {% endif%}
+
+            </ul>
+
+             <ul class="list-partner">
+                {% if(pars[4].image != '') %}
+                <li class="wow" data-wow-type="fadeInUp">
+                    <div class="item-partner">
+                        <a href="{{ pars[4].url }}"><img src="{{ pars[4].image |media }}"></a>
+                    </div>
+                </li>
+                {% endif%}
+
+                {% if(pars[5].image != '') %}
+                <li class="wow" data-wow-type="fadeInUp">
+                    <div class="item-partner">
+                        <a href="{{ pars[5].url }}"><img src="{{ pars[5].image |media }}"></a>
+                    </div>
+                </li>
+                {% endif%}
+
+                {% if(pars[6].image != '') %}
+                <li class="wow" data-wow-type="fadeInUp">
+                    <div class="item-partner">
+                        <a href="{{ pars[6].url }}"><img src="{{ pars[6].image |media }}"></a>
+                    </div>
+                </li>
+                {% endif%}
+
+                {% if(pars[7].image != '') %}
+                <li class="wow" data-wow-type="fadeInUp">
+                    <div class="item-partner">
+                        <a href="{{ pars[7].url }}"><img src="{{ pars[7].image |media }}"></a>
+                    </div>
+                </li>
+                {% endif%}
+            </ul>
+
+            <ul class="list-partner">
+                {% if(pars[8].image != '') %}
+                <li class="wow" data-wow-type="fadeInUp">
+                    <div class="item-partner">
+                        <a href="{{ pars[8].url }}"><img src="{{ pars[8].image |media }}"></a>
+                    </div>
+                </li>
+                {% endif%}
+
+                {% if(pars[9].image != '') %}
+                <li class="wow" data-wow-type="fadeInUp">
+                    <div class="item-partner">
+                        <a href="{{ pars[9].url }}"><img src="{{ pars[9].image |media }}"></a>
+                    </div>
+                </li>
+                {% endif%}
+
+                {% if(pars[10].image != '') %}
+                <li class="wow" data-wow-type="fadeInUp">
+                    <div class="item-partner">
+                        <a href="{{ pars[10].url }}"><img src="{{ pars[10].image |media }}"></a>
+                    </div>
+                </li>
+                {% endif%}
+
+                {% if(pars[11].image != '') %}
+                <li class="wow" data-wow-type="fadeInUp">
+                    <div class="item-partner">
+                        <a href="{{ pars[11].url }}"><img src="{{ pars[11].image |media }}"></a>
+                    </div>
+                </li>
+                {% endif%}
+            </ul>
+        </div>
+    </div>
+</div>
+{% framework %}

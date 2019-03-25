@@ -1,0 +1,127 @@
+{% set post = __SELF__.post %}
+{% set postsNomal = __SELF__.postsNomal %}
+{% set postsUpcoming = __SELF__.postsUpcoming %}
+{% set postReadMosts = __SELF__.postReadMosts %}
+
+<main id="main-child">
+    <div class="group-button-fix">
+        <a class="zalo" href="#"><span class="title">ZALO</span><span class="icon"><img
+                src="{{'assets/images/icon-zalo.png'|theme}}"></span></a>
+        <a class="facebook" href="#"><span class="title">FACEBOOK</span><span class="icon"><img
+                src="{{'assets/images/icon-face.png'|theme}}"></span></a>
+        <a class="google" href="#"><span class="title">GOOGLE</span><span class="icon"><img
+                src="{{'assets/images/icon-google.png'|theme}}"></span></a>
+    </div>
+    <div class="sec-new-detail sec-container">
+        <div class="container">
+            <div class="btn-group-select">
+                <div class="btn-select active left">
+                    <div class="menu-child-cube">
+                        <div class="cube-par">
+                            <a href="/tin-hoc-mai"><span class="cube-icon"></span>TIN HOCMAI</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-select right">
+                    <div class="menu-child-cube">
+                        <a href="/tin-bao-chi"><span class="cube-icon"></span>TIN BÁO CHÍ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="groupnew">
+                    <div class="col-md-8">
+                        <div class="detail-new">
+                            <h3 class="title">{{ post.title }}</h3>
+                            <p class="date-time">
+                            	<span class="hour">{{ post.published_at|date('H:i') }}</span>
+                            	<span class="date">{{ post.published_at|date('d-m-Y') }}</span></p>
+                            <div class="desc">
+                                <p>
+                                	{% if post.introductory %}
+                                		<div class="post-introductory">
+                                			{{ post.introductory|raw }}
+                                		</div>
+                                	{% endif %}
+                                </p>
+                            </div>
+                            <div class="content">
+                                <p>
+	                                {% if post.content %}
+	                            		{{ post.content|raw }}
+	                            	{% endif %}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="detail-new-bot clear">
+                            <div class="title-border-bot">
+                                <h3 class="title">
+                                    CÁC TIN KHÁC
+                                </h3>
+                            </div>
+                            <ul class="list-new-other">
+                               {% for postNomal in postsNomal %}
+                                    <li>
+                                        <div class="item-new-other">
+                                            <span class="cebu-before"></span>
+                                            <a href="/tin-hoc-mai/{{ postNomal.slug }}">{{ postNomal.title }}</a>
+                                            <span class="date-time">{{ postNomal.published_at|date('d-m-Y') }}</span>
+                                        </div>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 fix-sticky">
+                        <div class="detail-new-right clear">
+                            <div class="read-more-new">
+                                <div class="title-group-new">
+                                    <a href="#">ĐỌC NHIỀU NHẤT</a>
+                                </div>
+                                <ul class="list-read-more clear">
+                                   {% for postReadMost in postReadMosts %}
+                                        <li>
+                                            <div class="item-read-more">
+                                                <a href="/tin-hoc-mai/{{ postReadMost.slug }}">
+                                                    {{ postReadMost.title }}
+                                                </a>
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <div class="even-future">
+                                <div class="title-group-new">
+                                    <a href="#">SỰ KIỆN SẮP DIỄN RA</a>
+                                </div>
+                                <div class="has-gradient-group">
+                                    <!--<div class="gradient-bot"></div>-->
+                                    <ul class="list-even-future clear">
+                                        {% for postsUp in postsUpcoming %}
+                                        <li>
+                                            <a class="haslink" href="/tin-hoc-mai/{{ postsUp.slug }}">
+                                                <span class="date-time">
+                                                    {{ postsUp.published_at|date('d-m-Y') }}
+                                                </span>
+                                                <span class="title">
+                                                    {{ postsUp.title }}
+                                                </span>
+                                            </a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="fanpage-new">
+                                <div class="title-group-new">
+                                    <a href="#">CẬP NHẬT TIN MỚI NHẤT</a>
+                                </div>
+                                <div class="fb-page" data-href="https://www.facebook.com/Duc.BT.hcm/" data-tabs="timeline" data-width="100%" data-height="150" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Duc.BT.hcm/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Duc.BT.hcm/">Máy Bơm Nước MINI</a></blockquote></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

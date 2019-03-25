@@ -1,0 +1,10 @@
+columns:
+    id:
+        label: ID
+        type: text
+    title:
+        label: 'Tiêu đề'
+        type: text
+    start_date:
+        label: 'Ngày bắt đầu'
+        type: time

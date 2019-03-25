@@ -1,0 +1,44 @@
+==
+function onStart()
+{
+}
+==
+<ul class="list-group-magazine clear">
+    {% for listnew in list_new_page %}
+    <li>
+        <div class="item-magazine">
+            <div class="img">
+                <div class="img-new-item"
+                     style="background-image: url( {{ listnew.image|media }} );">
+                    <div class="link-click">
+
+                        <a href="{{ 'chi-tiet' | page({cat_id : listnew.category_id, slug : listnew.slug}) }}"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <h3 class="title"><a href="{{ 'chi-tiet' | page({cat_id : listnew.category_id, slug : listnew.slug}) }}">{{ listnew.title }}</a></h3>
+                <div class="article-name">
+                    {% if listnew.tagPosts %}
+                        {% for tag in listnew.tagPosts %}
+                            <a href="{{'tags' | page({ tags : tag})  }}">{{ tag }}</a>
+                            {% if not loop.last %},{% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    <p class="date-time"> {{ listnew.published_at|date('d-m-Y') }}</p>
+                </div>
+                <div class="desc">
+                    <p> {{ html_limit(listnew.introductory | raw, 80) }}</p>
+                </div>
+                <div class="btn-seemore">
+
+                    <a href="{{ 'chi-tiet' | page({cat_id : listnew.category_id, slug : listnew.slug}) }}">     Xem Thêm
+                    </a>
+                </div>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
+

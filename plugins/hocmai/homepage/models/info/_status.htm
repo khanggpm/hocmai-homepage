@@ -1,0 +1,15 @@
+<?php
+
+$text = [
+    1 => 'Khối xoay',
+    2 => 'CT giáo dục',
+ 
+];
+
+$class = [
+    1 => 'text-info',
+    2 => 'text-danger',
+    3 => 'text-warning'
+];
+
+echo '<span class="oc-icon-circle '.$class[$record->status].'">' .$text[$record->status].'</span>';

@@ -1,0 +1,25 @@
+columns:
+    logo:
+        label: 'Logo'
+        type: partial
+        searchable: true
+        path: ~/plugins/hocmai/homepage/models/settings/_image.htm
+    address:
+        label: 'Địa chỉ'
+        type: text
+    home_phone:
+        label: 'Điện thoại bàn'
+        type: text
+    mobile_phone:
+        label: 'Di động'
+        type: text
+    fb_link:
+        label: Facebook
+        type: text
+    zalo_link:
+        label: Zalo
+        type: text
+    youtube_link:
+        label: Youtube
+        type: text
+

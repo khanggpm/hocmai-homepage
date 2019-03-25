@@ -1,0 +1,56 @@
+ {% set ranks = __SELF__.ranks %}
+ {% set rooms = __SELF__.rooms %}
+ {% set nameRecuitments = __SELF__.nameRecuitments %}
+ 
+ <div class="group-search sec-container sec-40">
+    <div class="container">
+        <form
+
+                data-request="onSubmitForm();"
+                data-request-success="alert('Message sent');"
+                data-request-confirm="alert('confirm message ?');"
+                data-request-error="alert('Error occured');"
+        >
+        <div class="row">
+            
+            
+            <div class="col-md-5">
+                <div class="select-major">
+                    <select class="f-control select-form" id="optionRecruiment">
+                        <option value="0">Nghề nghiệp tuyển dụng</option>
+                        {% for nameRecuitment in nameRecuitments %}
+                            <option value="{{ nameRecuitment.id }}">{{ nameRecuitment.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <div class="icon-dow"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="select-major">
+                    <select class="f-control select-form" id="rank">
+                        <option value="#option">Cấp bậc tuyển dụng</option>
+                        {% for rank in ranks %}
+                            <option value="{{ rank.id }}">{{ rank.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <div class="icon-dow"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="btn-submit-search">
+                    <!-- <a id="btnTimKiem" >Tìm kiếm</a> -->
+                    <!-- <button type="submit" id="btnTimKiem">Tìm kiếm</button> -->
+                    <button
+                        type="button"
+                        data-request="onSubmitForm"
+                        class="btn btn-default">
+                        Do something
+                    </button>
+
+                </div>
+            </div>
+            
+        </div>
+        </form>
+    </div>
+</div>

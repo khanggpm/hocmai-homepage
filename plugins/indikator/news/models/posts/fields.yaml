@@ -1,0 +1,93 @@
+fields:
+    title:
+        label: 'Tiêu đề'
+        span: storm
+        cssClass: 'col-sm-12 col-lg-6'
+        required: true
+        attributes:
+            autofocus: ''
+        type: text
+    slug:
+        label: 'indikator.news::lang.form.slug'
+        required: true
+        preset: title
+        span: storm
+        cssClass: 'col-sm-12 col-lg-6'
+        type: text
+    category:
+        label: 'Loại tin'
+        nameFrom: name
+        descriptionFrom: description
+        span: storm
+        cssClass: 'col-sm-12 col-lg-6'
+        type: relation
+    tags:
+        label: 'indikator.news::lang.form.tags'
+        type: taglist
+        span: storm
+        cssClass: 'col-sm-12 col-lg-6'
+tabs:
+    fields:
+        introductory:
+            label: 'Mô tả'
+            size: giant
+            span: full
+            type: richeditor
+            tab: 'Mô tả tin tức'
+        content:
+            label: 'Nội dung bài viết'
+            size: giant
+            span: full
+            type: richeditor
+            tab: 'Nội dung'
+        link_event:
+            label: 'Link sự kiện'
+            span: full
+            type: text
+            tab: 'Link sự kiện'
+secondaryTabs:
+    fields:
+        postinfo:
+            type: postinfo
+            context: update
+            tab: Misc
+        image:
+            label: 'Ảnh hiển thị'
+            mode: image
+            span: full
+            type: mediafinder
+            tab: Misc
+        published_at:
+            label: 'Ngày xuất bản'
+            mode: datetime
+            span: full
+            type: datepicker
+            tab: Misc
+        hot_news:
+            label: 'Tin nổi bật'
+            span: auto
+            attributes: {  }
+            type: switch
+            tab: Misc
+        last_send_at:
+            label: 'indikator.news::lang.form.last_send_at'
+            type: datepicker
+            readOnly: true
+            mode: datetime
+            disabled: disabeld
+            tab: Misc
+        user:
+            label: 'indikator.news::lang.form.author'
+            span: full
+            type: dropdown
+            tab: Misc
+        status:
+            label: 'Trạng thái bài viết'
+            options:
+                1: 'indikator.news::lang.form.status_published'
+                2: 'indikator.news::lang.form.status_hide'
+                3: 'indikator.news::lang.form.status_draft'
+            span: auto
+            required: true
+            type: radio
+            tab: Misc

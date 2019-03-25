@@ -1,0 +1,19 @@
+[settings]
+==
+
+<!-- <div class="wrap-tool" style="background-image: url({{'assets/images/background-menu-child.jpg'|theme}});"> -->
+<div class="wrap-tool" style="background-image: url({{ setting[0]['header_banner_news']| media }});">
+    <div class="container">
+        <button class="navbar-toggle1">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="logo">
+            {% partial 'site/logo-white' %}
+        </div>
+        <div class="menu-group">
+            {% partial 'site/menu' %}
+        </div>
+    </div>
+</div>

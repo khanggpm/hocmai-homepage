@@ -1,0 +1,10 @@
+name: Ranks
+form: $/hocmai/recruitment/models/ranks/fields.yaml
+modelClass: hocmai\Recruitment\Models\Ranks
+defaultRedirect: hocmai/recruitment/ranks
+create:
+    redirect: 'hocmai/recruitment/ranks/update/:id'
+    redirectClose: hocmai/recruitment/ranks
+update:
+    redirect: hocmai/recruitment/ranks
+    redirectClose: hocmai/recruitment/ranks

@@ -1,0 +1,105 @@
+[threenews] [settings] [info]
+
+==
+
+function onTest()
+{
+    $this->page['result'] = input('value1') + input('value2');
+}
+
+
+==
+<div class="background-left1"></div>
+<div class="background-left2"></div>
+<div></div>
+<div class="container">
+    <div class="group-footer">
+        <div class="row">
+            <div class="row-child">
+                <div class="col-md-5">
+                    <div class="group-new-bot">
+                        <div class="title-child-ft">
+                            <h3>TIN TỨC </h3>
+
+                            <div class="group-new-ft">
+                                <ul class="list-new-ft clear">
+                                    {% for news in threenews.three_news %}
+                                    <li>
+                                        <div class="item-new-ft">
+                                            <div class="img">
+                                                <a style="background-image: url({{ news.image|media}});" href="{{ 'chi-tiet' | page({cat_id : news.category, slug: news.slug}) }}"></a>
+                                            </div>
+                                            <div class="content">
+                                                <a href="{{ 'chi-tiet' | page({cat_id : news.category, slug: news.slug}) }}" class="title">
+                                                    {{ news['title']}}
+                                                </a>
+                                                <p class="desc">
+                                                    {{ news['content']}}
+                                                </p>
+                                                 
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        
+                {% for set in setting %}
+
+                <div class="col-md-4">
+                    <div class="content-footer-child">
+                        <div class="logo-ft">
+                            <a href=""><img src="{{ 'assets/images/logo-ft.png'|theme}}"></a>
+                        </div>
+                        <div class="info-contact clear">
+                            <div class="item-contact-ft">
+                                <div class="img"><img src="{{ 'assets/images/icon-location.png'|theme}}"></div>
+                                <div class="content">
+                                    <p>{{set.address}}</p>
+                                </div>
+                            </div>
+                            <div class="item-contact-ft">
+                                <div class="img"><img src="{{ 'assets/images/icon-call.png'|theme}}"></div>
+                                <div class="content">
+                                    <a href="#">{{ set.home_phone }}</a>
+                                </div>
+                            </div>
+                            <div class="item-contact-ft">
+                                <div class="img"><img src="{{ 'assets/images/icon-mail.png'|theme}}"></div>
+                                <div class="content">
+                                    <a href="#">{{ set.mail }}</a>
+                                </div>
+                            </div>
+                            <div class="item-contact-ft">
+                                <div class="img"><img src="{{ 'assets/images/icon-fax.png'|theme}}"></div>
+                                <div class="content">
+                                    <a href="#">{{ set.mobile_phone }}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="follow-ft index clear">
+                            <h3 class="title">Kết nối với chúng tôi</h3>
+                            <div class="group-follow">
+                                <ul class="list-follow">
+                                    <li><a target="_blank" href="{{ set.fb_link }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li><a target="_blank" href="{{ set.zalo_link }}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li><a target="_blank" href="{{ set.youtube_link }}"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+               
+                {% partial 'site/lien-he' %}
+            </div>
+        </div>
+    </div>
+</div>

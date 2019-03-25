@@ -1,0 +1,11 @@
+fields:
+    title:
+        label: 'Tiêu đề'
+        span: auto
+        type: text
+    category:
+        label: Catefory
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation

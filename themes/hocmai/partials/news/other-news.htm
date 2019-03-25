@@ -1,0 +1,18 @@
+[relatenew]
+==
+<div class="title-border-bot">
+    <h3 class="title">
+        CÁC TIN KHÁC
+    </h3>
+</div>
+<ul class="list-new-other">
+    {% for relate_new in relate_news %}
+    <li>
+        <div class="item-new-other">
+            <span class="cebu-before"></span>
+            <a href="{{ relate_new.slug }}">{{ relate_new.title }}</a>
+            <span class="date-time">{{ relate_new.published_at|date('d-m-Y') }}</span>
+        </div>
+    </li>
+    {% endfor %}
+</ul>

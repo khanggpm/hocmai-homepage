@@ -1,0 +1,10 @@
+name: Partner
+form: $/hocmai/homepage/models/partner/fields.yaml
+modelClass: hocmai\Homepage\Models\Partner
+defaultRedirect: hocmai/homepage/partner
+create:
+    redirect: 'hocmai/homepage/partner/update/:id'
+    redirectClose: hocmai/homepage/partner
+update:
+    redirect: hocmai/homepage/partner
+    redirectClose: hocmai/homepage/partner

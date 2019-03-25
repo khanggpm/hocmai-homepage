@@ -1,0 +1,10 @@
+name: Category
+form: $/hocmai/news/models/category/fields.yaml
+modelClass: hocmai\News\Models\Category
+defaultRedirect: hocmai/news/category
+create:
+    redirect: 'hocmai/news/category/update/:id'
+    redirectClose: hocmai/news/category
+update:
+    redirect: hocmai/news/category
+    redirectClose: hocmai/news/category

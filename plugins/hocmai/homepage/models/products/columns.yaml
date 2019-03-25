@@ -1,0 +1,10 @@
+columns:
+    id:
+        label: ID
+        type: number
+    url:
+        label: URL
+        type: text
+    name:
+        label: 'Name '
+        type: text

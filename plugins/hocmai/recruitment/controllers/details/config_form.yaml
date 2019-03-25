@@ -1,0 +1,10 @@
+name: Details
+form: $/hocmai/recruitment/models/detail/fields.yaml
+modelClass: hocmai\Recruitment\Models\Detail
+defaultRedirect: hocmai/recruitment/details
+create:
+    redirect: 'hocmai/recruitment/details/update/:id'
+    redirectClose: hocmai/recruitment/details
+update:
+    redirect: hocmai/recruitment/details
+    redirectClose: hocmai/recruitment/details

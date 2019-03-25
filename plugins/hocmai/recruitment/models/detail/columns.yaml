@@ -1,0 +1,20 @@
+columns:
+    id:
+        label: ID
+        type: number
+    ranks_id:
+        label: 'Nghề nghiệp'
+        type: partial
+        path: ~/plugins/hocmai/recruitment/models/detail/_job.htm
+    room_id:
+        label: 'Phòng ban'
+        type: partial
+        path: ~/plugins/hocmai/recruitment/models/detail/_room.htm
+    ranks_id:
+        label: 'Cấp bậc'
+        type: partial
+        path: ~/plugins/hocmai/recruitment/models/detail/_rank.htm
+    job_position:
+        label: 'Địa điểm'
+        type: text
+

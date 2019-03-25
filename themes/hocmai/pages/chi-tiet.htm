@@ -1,0 +1,85 @@
+url = "/tin-tuc/:cat_id|^[0-9]+$/:slug"
+title = 'TIN TỨC'
+layout = 'default'
+
+==
+function onStart()
+{
+$this->addJs('assets/js/news.js');
+}
+==
+<div class="sec-new-detail sec-container">
+    <div class="container">
+        {% if this.param.cat_id == 1 %}
+        <div class="btn-group-select">
+            <div class="btn-select active left">
+                <div class="menu-child-cube">
+                    <div class="cube-par">
+                        <a href="{{ 'tin-tuc' | page({cat_id : 1}) }}"><span class="cube-icon"></span>TIN HOCMAI</a>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-select right">
+                <div class="menu-child-cube">
+                    <a href="{{ 'tin-tuc' | page({cat_id : 2}) }}"><span class="cube-icon"></span>TIN BÁO CHÍ</a>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if this.param.cat_id == 2 %}
+        <div class="btn-group-select">
+            <div class="btn-select  left">
+                <div class="menu-child-cube">
+                    <div class="cube-par">
+                        <a href="{{ 'tin-tuc' | page({cat_id : 1}) }}"><span class="cube-icon"></span>TIN HOCMAI</a>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-select active right">
+                <div class="menu-child-cube">
+                    <a href="{{ 'tin-tuc' | page({cat_id : 2}) }}"><span class="cube-icon"></span>TIN BÁO CHÍ</a>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+
+        <div class="row">
+            <div class="groupnew">
+                <div class="col-md-8">
+                    <div class="detail-new">
+                        {% partial 'news/detail-news' %}
+                    </div>
+                    <div class="detail-new-bot clear">
+                        {% partial 'news/other-news.htm' %}
+                    </div>
+
+                </div>
+                <div class="col-md-4 fix-sticky">
+                    <div class="detail-new-right clear">
+                        <div class="read-more-new">
+                            {% partial 'news/popular' %}
+                        </div>
+                        <div class="even-future">
+                            {% partial 'news/events' %}
+                        </div>
+                        <div class="fanpage-new">
+                            {% partial 'news/fanpage' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1916689885307106&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>

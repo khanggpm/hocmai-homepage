@@ -1,0 +1,25 @@
+[jobs]
+==
+ 
+<div class="container">
+    <ul class="list-job">
+        {% for job in jobs.slider %}
+        <li>
+            <div class="slider-job">
+                <div class="item-job-slider" style="background-image: url({{job.image | media  }});">
+                    <div class="content">
+                        <a href="#"></a>
+                        <div class="desc">
+                            <p>
+                                <span>{{ job.rank }}</span>
+                                {{ job.job_name }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="gradient-item-job"></div>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

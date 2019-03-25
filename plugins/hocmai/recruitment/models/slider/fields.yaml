@@ -1,0 +1,29 @@
+fields:
+    job_name:
+        label: 'Nghề nghiệp tuyển dụng'
+        span: auto
+        type: text
+    rank:
+        label: 'Cấp bậc tuyển dụng'
+        span: auto
+        type: text
+    image:
+        label: 'Ảnh nghề nghiệp'
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        span: auto
+        type: mediafinder
+    order:
+        label: 'Vị trí hiển thị'
+        options:
+            1: 'Đầu tiên'
+            2: 'Thứ 2'
+            3: 'Thứ 3'
+            4: 'Thứ 4'
+            5: 'Thứ 5'
+            6: 'Thứ 6'
+            7: 'Thứ 7'
+            8: 'Cuối cùng'
+        span: auto
+        type: dropdown

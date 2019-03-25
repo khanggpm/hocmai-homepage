@@ -1,0 +1,83 @@
+[detailjob]
+==
+
+<div class="container">
+    <div class="">
+        <div class="group-job-bot">
+            {% for job in relate_job %}
+            <div class="item-job-bot">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="name-partner children-job">
+                            <a class="label-select new" href="#"> 
+                                <span class="cebu-before"></span>{{ job.room_name }}
+
+                                {%  if job.status == 1 %}
+                                <span class="label-status label-hot">HOT</span>
+                                {% endif %}
+
+                                {% if job.status == 2 %}
+                                <span class="label-status label-new">NEW</span>
+                                {% endif %}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="name-job children-job">
+                            <a href="{{ 'tuyen-dung-chi-tiet' | page({id : job.id}) }}"> <span class="cebu-before"></span>
+                            {{ job.ranks_name }}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="date-job children-job">
+                            <a href="#"> <span class="cebu-before"></span><span class="show-mobile">Hạn nộp hồ sơ: </span>{{ job.deadline | date('d-m-Y')  }}8</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+           <!--  <div class="item-job-bot">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="name-partner children-job">
+                            <a class="label-select" href="#"> <span class="cebu-before"></span>Phòng Quảng Cáo 1<span class="label-status label-hot">HOT</span>
+                                <span class="label-status label-new">NEW</span></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="name-job children-job">
+                            <a href="#"> <span class="cebu-before"></span>Nhân viên Thiết kế</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="date-job children-job">
+                            <a href="#"> <span class="cebu-before"></span><span class="show-mobile">Hạn nộp hồ sơ: </span>24/12/2018</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-job-bot">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="name-partner children-job">
+                            <a href="#"> <span class="cebu-before"></span>Phòng Quảng Cáo 1</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="name-job children-job">
+                            <a href="#"> <span class="cebu-before"></span>Nhân viên Truyền thông sự kiện</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="date-job children-job">
+                            <a href="#"> <span class="cebu-before"></span><span class="show-mobile">Hạn nộp hồ sơ: </span>24/12/2018</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+           
+        <div class="btn-close">
+            <!-- <a href="#">XEM THÊM</a></div> -->
+    </div>
+</div>

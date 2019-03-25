@@ -1,0 +1,17 @@
+[readmosts]
+==
+<div class="title-group-new">
+    <a href="#">ĐỌC NHIỀU NHẤT</a>
+</div>
+<ul class="list-read-more clear" >
+    {% for rm in read_mosts %}
+    <li>
+        <div class="item-read-more">
+            <a href="{{ 'chi-tiet' | page({cat_id : rm.category_id, slug :rm.slug}) }}">{{ rm.title }}</a>
+            <!-- <a href="{{ rm.slug }}">{{ rm.title }}</a> -->
+        </div>
+    </li>
+    {% endfor %}
+    <li class="none"></li>
+    <li class="none"></li>
+</ul>

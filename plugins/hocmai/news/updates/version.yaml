@@ -1,0 +1,17 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table hocmai_news_categories'
+    - builder_table_create_hocmai_news_categories.php
+1.0.3:
+    - 'Created table hocmai_news_news'
+    - builder_table_create_hocmai_news_news.php
+1.0.4:
+    - 'Updated table hocmai_news_news'
+    - builder_table_update_hocmai_news_news.php
+1.0.5:
+    - 'Created table hocmai_news_posts'
+    - builder_table_create_hocmai_news_posts.php
+1.0.6:
+    - 'Updated table hocmai_news_posts'
+    - builder_table_update_hocmai_news_posts.php
